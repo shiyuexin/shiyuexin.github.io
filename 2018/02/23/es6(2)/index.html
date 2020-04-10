@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/4 | 石小鑫的博客</title>
+  <title>ES6/ES2015核心内容(下) | 石小鑫的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="石小鑫的博客 Web前端技术 H5前端前端技术 react redux es6 easyui css html5 jquery javascript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="石小鑫的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2020/04/index.html">
+  <meta name="description" content="常用ES6特性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6&#x2F;ES2015核心内容(下)">
+<meta property="og:url" content="http://yoursite.com/2018/02/23/es6(2)/index.html">
 <meta property="og:site_name" content="石小鑫的博客">
-<meta property="og:description" content="石小鑫的博客 Web前端技术 H5前端前端技术 react redux es6 easyui css html5 jquery javascript">
+<meta property="og:description" content="常用ES6特性">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-02-22T16:00:00.000Z">
+<meta property="article:modified_time" content="2019-03-11T13:23:09.265Z">
 <meta property="article:author" content="石小鑫">
 <meta name="twitter:card" content="summary">
   
@@ -183,54 +185,275 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-es6(2)" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/10/hexo%E7%BC%96%E8%BE%91%E5%8F%91%E5%B8%83/" class="archive-article-date">
-        <time datetime="2020-04-10T06:16:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/10/hexo%E7%BC%96%E8%BE%91%E5%8F%91%E5%B8%83/" target="_blank">hexo编辑发布</a>
   
+    <h1 class="article-title" itemprop="name">
+      ES6/ES2015核心内容(下)
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-          
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+<a href="/2018/02/23/es6(2)/" class="archive-article-date">
+        <time datetime="2018-02-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-23</time>
+</a>
+
   
   
-    </div></section>
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.2k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">5分</span>
+    </span>
+  </span>
+</div>
+
+
   
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>之前，总结过一篇《ES6/ES2015核心内容(上)》，地址<a href="https://shiyuexin.github.io/es6(1)/" target="_blank" rel="noopener">https://shiyuexin.github.io/es6(1)/</a><br>涉及了es6最常用的一些语法：let, const, class, extends, super, arrow functions, template string, destructuring, default, rest arguments，本文我们继续总结。</p>
+<a id="more"></a>
+
+
+<h3 id="常用的ES6特性"><a href="#常用的ES6特性" class="headerlink" title="常用的ES6特性"></a>常用的ES6特性</h3><h4 id="import-export"><a href="#import-export" class="headerlink" title="import export"></a>import export</h4><p>这两个家伙对应的就是es6自己的module功能。</p>
+<p>我们之前写的Javascript一直都没有模块化的体系，无法将一个庞大的js工程拆分成一个个功能相对独立但相互依赖的小工程，再用一种简单的方法把这些小工程连接在一起。</p>
+<p>这有可能导致两个问题：</p>
+<p>一方面js代码变得很臃肿，难以维护</p>
+<p>另一方面我们常常得很注意每个script标签在html中的位置，因为它们通常有依赖关系，顺序错了可能就会出bug</p>
+<p>在es6之前为解决上面提到的问题，我们得利用第三方提供的一些方案，主要有两种CommonJS(服务器端)和AMD（浏览器端，如require.js）。</p>
+<p>如果想了解更多AMD，尤其是require.js，可以参看这个教程：why modules on the web are useful and the mechanisms that can be used on the web today to enable them</p>
+<p>而现在我们有了es6的module功能，它实现非常简单，可以成为服务器和浏览器通用的模块解决方案。</p>
+<p>ES6模块的设计思想，是尽量的静态化，使得编译时就能确定模块的依赖关系，以及输入和输出的变量。CommonJS和AMD模块，都只能在运行时确定这些东西。</p>
+<p>首先我们回顾下require.js的写法。假设我们有两个js文件: index.js和content.js,现在我们想要在index.js中使用content.js返回的结果，我们要怎么做呢？<br>首先定义：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;content.js</span><br><span class="line">define(&#39;content.js&#39;, function()&#123;</span><br><span class="line">    return &#39;A cat&#39;;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>然后require：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;index.js</span><br><span class="line">require([&#39;.&#x2F;content.js&#39;], function(animal)&#123;</span><br><span class="line">    console.log(animal);   &#x2F;&#x2F;A cat</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>那CommonJS是怎么写的呢？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;index.js</span><br><span class="line">var animal &#x3D; require(&#39;.&#x2F;content.js&#39;)</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;content.js</span><br><span class="line">module.exports &#x3D; &#39;A cat&#39;</span><br></pre></td></tr></table></figure>
+
+<p>ES6写法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;index.js</span><br><span class="line">import animal from &#39;.&#x2F;content&#39;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;content.js</span><br><span class="line">export default &#39;A cat&#39;</span><br></pre></td></tr></table></figure>
+<h4 id="ES6-module的其他高级用法"><a href="#ES6-module的其他高级用法" class="headerlink" title="ES6 module的其他高级用法"></a>ES6 module的其他高级用法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;content.js</span><br><span class="line"></span><br><span class="line">export default &#39;A cat&#39;    </span><br><span class="line">export function say()&#123;</span><br><span class="line">    return &#39;Hello!&#39;</span><br><span class="line">&#125;    </span><br><span class="line">export const type &#x3D; &#39;dog&#39;</span><br></pre></td></tr></table></figure>
+<p>上面可以看出，export命令除了输出变量，还可以输出函数，甚至是类（react的模块基本都是输出类）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;index.js</span><br><span class="line"></span><br><span class="line">import &#123; say, type &#125; from &#39;.&#x2F;content&#39;  </span><br><span class="line">let says &#x3D; say()</span><br><span class="line">console.log(&#96;The $&#123;type&#125; says $&#123;says&#125;&#96;)  &#x2F;&#x2F;The dog says Hello</span><br></pre></td></tr></table></figure>
+<p>这里输入的时候要注意：大括号里面的变量名，必须与被导入模块（content.js）对外接口的名称相同。</p>
+<p>如果还希望输入content.js中输出的默认值(default), 可以写在大括号外面。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;index.js</span><br><span class="line"></span><br><span class="line">import animal, &#123; say, type &#125; from &#39;.&#x2F;content&#39;  </span><br><span class="line">let says &#x3D; say()</span><br><span class="line">console.log(&#96;The $&#123;type&#125; says $&#123;says&#125; to $&#123;animal&#125;&#96;)  </span><br><span class="line">&#x2F;&#x2F;The dog says Hello to A cat</span><br></pre></td></tr></table></figure>
+<h4 id="修改变量名"><a href="#修改变量名" class="headerlink" title="修改变量名"></a>修改变量名</h4><p>此时我们不喜欢type这个变量名，因为它有可能重名，所以我们需要修改一下它的变量名。在es6中可以用as实现一键换名。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;index.js</span><br><span class="line"></span><br><span class="line">import animal, &#123; say, type as animalType &#125; from &#39;.&#x2F;content&#39;  </span><br><span class="line">let says &#x3D; say()</span><br><span class="line">console.log(&#96;The $&#123;animalType&#125; says $&#123;says&#125; to $&#123;animal&#125;&#96;)  </span><br><span class="line">&#x2F;&#x2F;The dog says Hello to A cat</span><br></pre></td></tr></table></figure>
+<h4 id="模块的整体加载"><a href="#模块的整体加载" class="headerlink" title="模块的整体加载"></a>模块的整体加载</h4><p>除了指定加载某个输出值，还可以使用整体加载，即用星号（*）指定一个对象，所有输出值都加载在这个对象上面。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;index.js</span><br><span class="line"></span><br><span class="line">import animal, * as content from &#39;.&#x2F;content&#39;  </span><br><span class="line">let says &#x3D; content.say()</span><br><span class="line">console.log(&#96;The $&#123;content.type&#125; says $&#123;says&#125; to $&#123;animal&#125;&#96;)  </span><br><span class="line">&#x2F;&#x2F;The dog says Hello to A cat</span><br></pre></td></tr></table></figure>
+<p>通常星号*结合as一起使用比较合适。</p>
+<h4 id="last"><a href="#last" class="headerlink" title="last"></a>last</h4><p>考虑下面的场景：上面的content.js一共输出了三个变量（default, say, type）,假如我们的实际项目当中只需要用到type这一个变量，其余两个我们暂时不需要。我们可以只输入一个变量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import &#123; type &#125; from &#39;.&#x2F;content&#39;</span><br></pre></td></tr></table></figure>
+
+<p>由于其他两个变量没有被使用，我们希望代码打包的时候也忽略它们，抛弃它们，这样在大项目中可以显著减少文件的体积。</p>
+<p>ES6帮我们实现了！</p>
+<p>不过，目前无论是webpack还是browserify都还不支持这一功能…</p>
+<p>如果你现在就想实现这一功能的话，可以尝试使用rollup.js</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>以上就是ES6最常用的一些语法，希望更全面了解es6伙伴们可以去看阮一峰所著的电子书《ECMAScript 6入门》地址：<a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener">http://es6.ruanyifeng.com/</a></p>
+<p>本文参考：<a href="https://segmentfault.com/a/1190000004368132" target="_blank" rel="noopener">https://segmentfault.com/a/1190000004368132</a></p>
 
     
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你喜欢我的文章<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          石小鑫
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://yoursite.com/2018/02/23/es6(2)/" title="ES6/ES2015核心内容(下)" target="_blank">http://yoursite.com/2018/02/23/es6(2)/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/ES6-ES2015//" class="article-tag-list-link color1">ES6/ES2015</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/02/23/es6(2)/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+    <a href="/2020/04/10/hexo%E7%BC%96%E8%BE%91%E5%8F%91%E5%B8%83/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          hexo编辑发布
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/02/22/es6(1)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6/ES2015核心内容(上)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -271,8 +494,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

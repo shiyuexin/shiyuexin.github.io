@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/4 | 石小鑫的博客</title>
+  <title>nginx使用及常用配置 | 石小鑫的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="石小鑫的博客 Web前端技术 H5前端前端技术 react redux es6 easyui css html5 jquery javascript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="石小鑫的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2020/04/index.html">
+  <meta name="description" content="nginx使用及常用配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nginx使用及常用配置">
+<meta property="og:url" content="http://yoursite.com/2017/12/28/nginx-config/index.html">
 <meta property="og:site_name" content="石小鑫的博客">
-<meta property="og:description" content="石小鑫的博客 Web前端技术 H5前端前端技术 react redux es6 easyui css html5 jquery javascript">
+<meta property="og:description" content="nginx使用及常用配置">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/images/nginx-1.png">
+<meta property="article:published_time" content="2017-12-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2019-03-11T13:23:09.266Z">
 <meta property="article:author" content="石小鑫">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/nginx-1.png">
   
     <link rel="alternative" href="/atom.xml" title="石小鑫的博客" type="application/atom+xml">
   
@@ -183,54 +187,243 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-nginx-config" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/10/hexo%E7%BC%96%E8%BE%91%E5%8F%91%E5%B8%83/" class="archive-article-date">
-        <time datetime="2020-04-10T06:16:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/10/hexo%E7%BC%96%E8%BE%91%E5%8F%91%E5%B8%83/" target="_blank">hexo编辑发布</a>
   
+    <h1 class="article-title" itemprop="name">
+      nginx使用及常用配置
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-          
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+<a href="/2017/12/28/nginx-config/" class="archive-article-date">
+        <time datetime="2017-12-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-28</time>
+</a>
+
   
   
-    </div></section>
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">736字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">3分</span>
+    </span>
+  </span>
+</div>
+
+
   
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="关于nginx"><a href="#关于nginx" class="headerlink" title="关于nginx"></a>关于nginx</h3><p>Nginx (engine x) 是一个高性能的HTTP和反向代理服务器，也是一个IMAP/POP3/SMTP服务器。<br>Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-like 协议下发行。<br>其特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页服务器中表现较好。</p>
+<a id="more"></a>
+
+<h3 id="Nginx安装"><a href="#Nginx安装" class="headerlink" title="Nginx安装"></a>Nginx安装</h3><h4 id="1、从官网（http-www-nginx-org）下载最新的Nginx并解压，进入解压目录进行相关安装操作即可，具体如下："><a href="#1、从官网（http-www-nginx-org）下载最新的Nginx并解压，进入解压目录进行相关安装操作即可，具体如下：" class="headerlink" title="1、从官网（http://www.nginx.org）下载最新的Nginx并解压，进入解压目录进行相关安装操作即可，具体如下："></a>1、从官网（<a href="http://www.nginx.org）下载最新的Nginx并解压，进入解压目录进行相关安装操作即可，具体如下：">http://www.nginx.org）下载最新的Nginx并解压，进入解压目录进行相关安装操作即可，具体如下：</a></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ tar –xvf  nginx-1.8.1.tar</span><br><span class="line">$ cd  nginx-1.8.1</span><br><span class="line">$ sudo  .&#x2F;configure</span><br><span class="line">$ sudo  make</span><br><span class="line">$sudo  make install</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、安装之后，使用nginx-–v验证下是否安装完成："><a href="#2、安装之后，使用nginx-–v验证下是否安装完成：" class="headerlink" title="2、安装之后，使用nginx –v验证下是否安装完成："></a>2、安装之后，使用nginx –v验证下是否安装完成：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nginx -V</span><br></pre></td></tr></table></figure>
+<p><img src="/images/nginx-1.png" alt="版本查看"></p>
+<h4 id="3、开启nginx服务，并打开浏览器地址：127-0-0-1"><a href="#3、开启nginx服务，并打开浏览器地址：127-0-0-1" class="headerlink" title="3、开启nginx服务，并打开浏览器地址：127.0.0.1"></a>3、开启nginx服务，并打开浏览器地址：127.0.0.1</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo  .&#x2F;nginx  &#x2F;&#x2F; 开启服务</span><br></pre></td></tr></table></figure>
+
+<h3 id="Nginx配置"><a href="#Nginx配置" class="headerlink" title="Nginx配置"></a>Nginx配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br></pre></td><td class="code"><pre><span class="line">#user  nobody;</span><br><span class="line">worker_processes  auto; #根据设备cpu的个数 自动选择</span><br><span class="line"> </span><br><span class="line">#error_log  &#x2F;nginx&#x2F;nginx-1.8.1&#x2F;logs&#x2F;error.log;</span><br><span class="line">#error_log  logs&#x2F;error.log  notice;</span><br><span class="line">#error_log  logs&#x2F;error.log  info;</span><br><span class="line"> </span><br><span class="line">#pid        logs&#x2F;nginx.pid;</span><br><span class="line"> </span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024; ＃允许请求的连接数</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">http &#123;</span><br><span class="line">    include       mime.types;</span><br><span class="line">    default_type  application&#x2F;octet-stream;</span><br><span class="line"> </span><br><span class="line">    #log_format main  &#39;$remote_addr - $remote_user[$time_local] &quot;$request&quot; &#39;</span><br><span class="line">    #                  &#39;$status $body_bytes_sent&quot;$http_referer&quot; &#39;</span><br><span class="line">    #                  &#39;&quot;$http_user_agent&quot;&quot;$http_x_forwarded_for&quot;&#39;;</span><br><span class="line"> </span><br><span class="line">    #access_log logs&#x2F;access.log  main;</span><br><span class="line"> </span><br><span class="line">    sendfile        on; ＃允许发送文件</span><br><span class="line">    #tcp_nopush     on;</span><br><span class="line"> </span><br><span class="line">    #keepalive_timeout  0;</span><br><span class="line">    keepalive_timeout  65; ＃会话超时时间</span><br><span class="line"> </span><br><span class="line">    #gzip on;</span><br><span class="line"> </span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80; ＃监听的端口</span><br><span class="line">        server_name  localhost; ＃服务端域名或ip</span><br><span class="line"> </span><br><span class="line">        #charset koi8-r;</span><br><span class="line"> </span><br><span class="line">        #access_log  logs&#x2F;host.access.log  main;</span><br><span class="line"> </span><br><span class="line">        location &#x2F; &#123; #Web服务的根目录</span><br><span class="line">            root        &#x2F;project&#x2F;cwteam&#x2F;cwteam&#x2F;cwteam;</span><br><span class="line">            index  index.html index.htm index.php;＃ 加入了html和php</span><br><span class="line">            #如果文件不存在则尝试TP解析 </span><br><span class="line">            try_files  $uri &#x2F;index.php$uri;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        error_page  404              &#x2F;404.html;</span><br><span class="line"> </span><br><span class="line">        # redirect server error pages to thestatic page &#x2F;50x.html</span><br><span class="line">        #</span><br><span class="line">        error_page   500 502 503 504  &#x2F;50x.html; ＃可自定义错误页面</span><br><span class="line">        location &#x3D; &#x2F;50x.html &#123;</span><br><span class="line">            root   html;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        # proxy the PHP scripts to Apachelistening on 127.0.0.1:80</span><br><span class="line">        #</span><br><span class="line">        #location ~ \.php$ &#123;</span><br><span class="line">        #   proxy_pass   http:&#x2F;&#x2F;127.0.0.1;</span><br><span class="line">        #&#125;</span><br><span class="line"> </span><br><span class="line">        # pass the PHP scripts to FastCGIserver listening on 127.0.0.1:9000</span><br><span class="line">        #</span><br><span class="line">        #location ~ \.php$ &#123;</span><br><span class="line">        #   root          &#x2F;project&#x2F;cwteam&#x2F;cwteam&#x2F;cwteam;</span><br><span class="line">        #   fastcgi_pass   127.0.0.1:9000;</span><br><span class="line">        #   fastcgi_index  index.php;</span><br><span class="line">        #   fastcgi_param SCRIPT_FILENAME &#x2F;scripts$fastcgi_script_name;</span><br><span class="line">        #   include        fastcgi_params;</span><br><span class="line">        #&#125;</span><br><span class="line">        location ~ \.php &#123;  ＃默认nginx不支持php拓展 这里把它添加上</span><br><span class="line">            root        &#x2F;project&#x2F;cwteam&#x2F;cwteam&#x2F;cwteam; </span><br><span class="line">            fastcgi_pass   127.0.0.1:9000; </span><br><span class="line">            fastcgi_index  index.php; </span><br><span class="line">            fastcgi_intercept_errors on;</span><br><span class="line">            #设置PATH_INFO，注意fastcgi_split_path_info已经自动改写了fastcgi_script_name变量， </span><br><span class="line">            #后面不需要再改写SCRIPT_FILENAME,SCRIPT_NAME环境变量，所以必须在加载fastcgi.conf之前设置 </span><br><span class="line">            fastcgi_split_path_info  ^(.+\.php)(&#x2F;.*)$; </span><br><span class="line">            fastcgi_param  PATH_INFO $fastcgi_path_info; </span><br><span class="line">             </span><br><span class="line">            #加载Nginx默认&quot;服务器环境变量&quot;配置 </span><br><span class="line">            include        fastcgi.conf; </span><br><span class="line">        &#125; </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">        # deny access to .htaccess files, ifApache&#39;s document root</span><br><span class="line">        # concurs with nginx&#39;s one</span><br><span class="line">        #</span><br><span class="line">        #location ~ &#x2F;\.ht &#123;</span><br><span class="line">        #   deny  all;</span><br><span class="line">        #&#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    # another virtual host using mix of IP-,name-, and port-based configuration</span><br><span class="line">    #</span><br><span class="line">    #server &#123;</span><br><span class="line">    #    listen       8000;</span><br><span class="line">    #   listen       somename:8080;</span><br><span class="line">    #   server_name  somename  alias another.alias;</span><br><span class="line"> </span><br><span class="line">    #   location &#x2F; &#123;</span><br><span class="line">    #       root   html;</span><br><span class="line">    #       index  index.html index.htm;</span><br><span class="line">    #   &#125;</span><br><span class="line">    #&#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">    # HTTPS server</span><br><span class="line">    #</span><br><span class="line">    #server &#123;</span><br><span class="line">    #   listen       443 ssl;</span><br><span class="line">    #   server_name  localhost;</span><br><span class="line"> </span><br><span class="line">    #   ssl_certificate      cert.pem;</span><br><span class="line">    #   ssl_certificate_key  cert.key;</span><br><span class="line"> </span><br><span class="line">    #   ssl_session_cache   shared:SSL:1m;</span><br><span class="line">    #   ssl_session_timeout  5m;</span><br><span class="line"> </span><br><span class="line">    #   ssl_ciphers  HIGH:!aNULL:!MD5;</span><br><span class="line">    #   ssl_prefer_server_ciphers  on;</span><br><span class="line"> </span><br><span class="line">    #   location &#x2F; &#123;</span><br><span class="line">    #       root   html;</span><br><span class="line">    #       index  index.html index.htm;</span><br><span class="line">    #   &#125;</span><br><span class="line">    #&#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你喜欢我的文章<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          石小鑫
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://yoursite.com/2017/12/28/nginx-config/" title="nginx使用及常用配置" target="_blank">http://yoursite.com/2017/12/28/nginx-config/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/nginx服务//" class="article-tag-list-link color3">nginx服务</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/12/28/nginx-config/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+    <a href="/2018/02/08/zepto-lottery-canvas/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          zepto-canvas刮刮卡效果
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/12/21/weixin-forbidden-share/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">微信隐藏分享等操作按钮</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -271,8 +464,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

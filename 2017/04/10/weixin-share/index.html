@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/4 | 石小鑫的博客</title>
+  <title>微信分享js自定义配置 | 石小鑫的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="石小鑫的博客 Web前端技术 H5前端前端技术 react redux es6 easyui css html5 jquery javascript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="石小鑫的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2020/04/index.html">
+  <meta name="description" content="微信分享到朋友／朋友圈自定义title，url，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信分享js自定义配置">
+<meta property="og:url" content="http://yoursite.com/2017/04/10/weixin-share/index.html">
 <meta property="og:site_name" content="石小鑫的博客">
-<meta property="og:description" content="石小鑫的博客 Web前端技术 H5前端前端技术 react redux es6 easyui css html5 jquery javascript">
+<meta property="og:description" content="微信分享到朋友／朋友圈自定义title，url，">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2017-04-09T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-02-21T06:07:10.074Z">
 <meta property="article:author" content="石小鑫">
 <meta name="twitter:card" content="summary">
   
@@ -183,54 +185,234 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-weixin-share" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/10/hexo%E7%BC%96%E8%BE%91%E5%8F%91%E5%B8%83/" class="archive-article-date">
-        <time datetime="2020-04-10T06:16:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/10/hexo%E7%BC%96%E8%BE%91%E5%8F%91%E5%B8%83/" target="_blank">hexo编辑发布</a>
   
+    <h1 class="article-title" itemprop="name">
+      微信分享js自定义配置
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-          
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+<a href="/2017/04/10/weixin-share/" class="archive-article-date">
+        <time datetime="2017-04-09T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-10</time>
+</a>
+
   
   
-    </div></section>
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">570字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">2分</span>
+    </span>
+  </span>
+</div>
+
+
   
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h3><p>1.引入JS文件，在需要调用JS接口的页面引入JS文件:<br>（支持https）：<a href="http://res.wx.qq.com/open/js/jweixin-1.2.0.js" target="_blank" rel="noopener">http://res.wx.qq.com/open/js/jweixin-1.2.0.js</a><br>2.通过config接口注入权限验证配置，所有需要使用JS-SDK的页面必须先注入配置信息，否则将无法调用（同一个url仅需调用一次，对于变化url的SPA的web app可在每次url变化时进行调用）；<br>3.通过ready接口处理成功验证。</p>
+<a id="more"></a>
+<h3 id="config配置"><a href="#config配置" class="headerlink" title="config配置"></a>config配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">wx.config(&#123;</span><br><span class="line">    debug: true,  &#x2F;&#x2F; 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。</span><br><span class="line">    appId: &#39;&#39;,    &#x2F;&#x2F; 必填，公众号的唯一标识</span><br><span class="line">    timestamp: ,  &#x2F;&#x2F; 必填，生成签名的时间戳</span><br><span class="line">    nonceStr: &#39;&#39;, &#x2F;&#x2F; 必填，生成签名的随机串</span><br><span class="line">    signature: &#39;&#39;,&#x2F;&#x2F; 必填，签名，见附录1</span><br><span class="line">    jsApiList: [] &#x2F;&#x2F; 必填，需要使用的微信JS接口列表</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="封装工具类"><a href="#封装工具类" class="headerlink" title="封装工具类"></a>封装工具类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">var weixin &#x3D; &#123;</span><br><span class="line">    share: function (option) &#123;</span><br><span class="line">        this.option &#x3D; option;</span><br><span class="line">        Promise.all([this.loadSign(), this.loadFile()]).then(() &#x3D;&gt; &#123;</span><br><span class="line">            this.use();</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    loadSign: function() &#123;</span><br><span class="line">        var root;</span><br><span class="line">        var url &#x3D; root + &#39;&#x2F;userApi&#x2F;weixinJsapi&#39;;</span><br><span class="line">        return new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">            request.jsonp(&#123;</span><br><span class="line">                url: url,</span><br><span class="line">                data: &#123;</span><br><span class="line">                    url: location.href.split(&#39;#&#39;)[0]</span><br><span class="line">                &#125;,</span><br><span class="line">                callbackKey: &#39;jsonp_callback&#39;</span><br><span class="line">            &#125;).then((res) &#x3D;&gt; &#123;</span><br><span class="line">                this.token &#x3D; res.data;</span><br><span class="line">                resolve();</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    loadFile: function() &#123;</span><br><span class="line">        if (window.wx) return window.noopPromise;</span><br><span class="line">        var script&#x3D;document.createElement(&#39;script&#39;);</span><br><span class="line">        script.setAttribute(&#39;src&#39;, &#39;http:&#x2F;&#x2F;res.wx.qq.com&#x2F;open&#x2F;js&#x2F;jweixin-1.2.0.js&#39;);</span><br><span class="line">        document.body.appendChild(script);</span><br><span class="line">        return new Promise((resolve, reject) &#x3D;&gt; &#123;</span><br><span class="line">            resolve();</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    use: function() &#123;</span><br><span class="line">        var wx &#x3D; window.wx;</span><br><span class="line">        var config &#x3D; Object.assign(&#123;&#125;, &#123; debug: false, jsApiList: [</span><br><span class="line">            &#39;onMenuShareTimeline&#39;,</span><br><span class="line">            &#39;onMenuShareAppMessage&#39;,</span><br><span class="line">            &#39;onMenuShareQQ&#39;,</span><br><span class="line">            &#39;onMenuShareWeibo&#39;,</span><br><span class="line">            &#39;onMenuShareQZone&#39;] &#125;, this.token);</span><br><span class="line">        wx.config(config);</span><br><span class="line">        var option &#x3D; this.option;</span><br><span class="line">        wx.ready(function() &#123;</span><br><span class="line">            wx.onMenuShareTimeline(option);</span><br><span class="line">            wx.onMenuShareAppMessage(option);</span><br><span class="line">            wx.onMenuShareQQ(option);</span><br><span class="line">            wx.onMenuShareWeibo(option);</span><br><span class="line">            wx.onMenuShareQZone(option);                </span><br><span class="line">        &#125;)</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F;调试微信接口</span><br><span class="line">        wx.error(function(res) &#123;</span><br><span class="line">            window.alert(&#39;res&#39;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="应用工具类"><a href="#应用工具类" class="headerlink" title="应用工具类"></a>应用工具类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var option &#x3D; &#123;</span><br><span class="line">    title: &#39;标题&#39;,</span><br><span class="line">    desc: &#39;描述文案&#39; || &#39;默认描述文案~\n换行&#39;,</span><br><span class="line">    imgUrl: &#39;http:&#x2F;&#x2F;blog.xonepage.com&#x2F;uploads&#x2F;portrait_1.jpg&#39;,</span><br><span class="line">    link: window.location.href,</span><br><span class="line">    success: function() &#123;</span><br><span class="line">        window.toast(&#39;分享成功&#39;);</span><br><span class="line">    &#125;,</span><br><span class="line">    cancel: function() &#123;</span><br><span class="line">        window.toast(&#39;分享取消&#39;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">weixin.share(option)</span><br></pre></td></tr></table></figure>
+    
 
     
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你喜欢我的文章<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          石小鑫
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://yoursite.com/2017/04/10/weixin-share/" title="微信分享js自定义配置" target="_blank">http://yoursite.com/2017/04/10/weixin-share/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/微信//" class="article-tag-list-link color3">微信</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/04/10/weixin-share/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+    <a href="/2017/08/03/vue-build/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          vue2.0新手上路-环境搭建到发布
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -271,8 +453,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

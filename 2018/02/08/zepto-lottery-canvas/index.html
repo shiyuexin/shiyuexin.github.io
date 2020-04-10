@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/4 | 石小鑫的博客</title>
+  <title>zepto-canvas刮刮卡效果 | 石小鑫的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="石小鑫的博客 Web前端技术 H5前端前端技术 react redux es6 easyui css html5 jquery javascript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="石小鑫的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2020/04/index.html">
+  <meta name="description" content="基于canvas的刮奖活动">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zepto-canvas刮刮卡效果">
+<meta property="og:url" content="http://yoursite.com/2018/02/08/zepto-lottery-canvas/index.html">
 <meta property="og:site_name" content="石小鑫的博客">
-<meta property="og:description" content="石小鑫的博客 Web前端技术 H5前端前端技术 react redux es6 easyui css html5 jquery javascript">
+<meta property="og:description" content="基于canvas的刮奖活动">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/images/ggl-1.jpg">
+<meta property="article:published_time" content="2018-02-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-02-21T03:42:31.782Z">
 <meta property="article:author" content="石小鑫">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/ggl-1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="石小鑫的博客" type="application/atom+xml">
   
@@ -183,54 +187,264 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-zepto-lottery-canvas" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/10/hexo%E7%BC%96%E8%BE%91%E5%8F%91%E5%B8%83/" class="archive-article-date">
-        <time datetime="2020-04-10T06:16:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/10/hexo%E7%BC%96%E8%BE%91%E5%8F%91%E5%B8%83/" target="_blank">hexo编辑发布</a>
   
+    <h1 class="article-title" itemprop="name">
+      zepto-canvas刮刮卡效果
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-          
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+<a href="/2018/02/08/zepto-lottery-canvas/" class="archive-article-date">
+        <time datetime="2018-02-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-08</time>
+</a>
+
   
   
-    </div></section>
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">2.5k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">13分</span>
+    </span>
+  </span>
+</div>
+
+
   
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>前段时间做了个移动端的刮刮卡活动。比较常见的就是支付宝的蚂蚁的刮刮卡，想必大家都不陌生。<br>现在我在这里略微做个小结，如果能给到大家帮助，我不胜荣幸。</p>
+<a id="more"></a>
+
+<h3 id="基础依赖"><a href="#基础依赖" class="headerlink" title="基础依赖"></a>基础依赖</h3><p>我做的这个刮刮卡，依赖于zepto.js。当然，大家如果使用jq，也一样可以达到效果，可自行选择</p>
+<h3 id="效果预览"><a href="#效果预览" class="headerlink" title="效果预览"></a>效果预览</h3><p>我们先看下我的项目效果图<br><img src="/images/ggl-1.jpg" alt="移动端刮刮卡样式"></p>
+<h3 id="html部分"><a href="#html部分" class="headerlink" title="html部分"></a>html部分</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;body class&#x3D;&quot;main_box&quot; style&#x3D;&quot;background-color: #1A1A1A&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;box&quot;&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;bg_in&quot;&gt;</span><br><span class="line">            &lt;div class&#x3D;&quot;title&quot;&gt;•&amp;nbsp;刮奖区&amp;nbsp;•&lt;&#x2F;div&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">        &lt;div class&#x3D;&quot;content&quot;&gt;</span><br><span class="line">            &lt;div id&#x3D;&quot;mask_img_bg&quot;&gt;&lt;img  src&#x3D;&quot;images&#x2F;mask_img_bg1.jpg&quot; &#x2F;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">            &lt;img id&#x3D;&quot;redux&quot; src&#x3D;&quot;images&#x2F;mask-img.jpg&quot; &#x2F;&gt;</span><br><span class="line">        &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;show&quot;&gt;</span><br><span class="line">        &lt;img class&#x3D;&quot;show_bg&quot; src&#x3D;&quot;images&#x2F;ok.png&quot;&gt;</span><br><span class="line">        &lt;img class&#x3D;&quot;show_bg1&quot; src&#x3D;&quot;images&#x2F;ok1.png&quot;&gt;</span><br><span class="line">        &lt;img class&#x3D;&quot;show_food&quot; src&#x3D;&quot;images&#x2F;mask_img_bg1.jpg&quot; &#x2F;&gt;</span><br><span class="line">        &lt;a class&#x3D;&quot;close&quot;&gt;&lt;&#x2F;a&gt;</span><br><span class="line">        &lt;a class&#x3D;&quot;btn&quot;&gt;&lt;&#x2F;a&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;mask&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="CSS部分（大家根据UI自行更改吧，楼楼依旧只是提供一个简单的样式）"><a href="#CSS部分（大家根据UI自行更改吧，楼楼依旧只是提供一个简单的样式）" class="headerlink" title="CSS部分（大家根据UI自行更改吧，楼楼依旧只是提供一个简单的样式）"></a>CSS部分（大家根据UI自行更改吧，楼楼依旧只是提供一个简单的样式）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);</span><br><span class="line">    margin: 0;</span><br><span class="line">    -webkit-touch-callout: none; &#x2F;* prevent callout to copy image, etc when tap to hold *&#x2F;</span><br><span class="line">    -webkit-text-size-adjust: none; &#x2F;* prevent webkit from resizing text to fit *&#x2F;</span><br><span class="line">    &#x2F;* make transparent link selection, adjust last value opacity 0 to 1.0 *&#x2F;</span><br><span class="line">    -webkit-user-select: none; &#x2F;* prevent copy paste, to allow, change &#39;none&#39; to &#39;text&#39; *&#x2F;</span><br><span class="line">    &#x2F;* -webkit-tap-highlight-color: rgba(0,0,0,0); *&#x2F;</span><br><span class="line">&#125;</span><br><span class="line">html &#123;height: 100%&#125;</span><br><span class="line">a &#123;</span><br><span class="line">    color: #000;</span><br><span class="line">    padding: 0;</span><br><span class="line">    text-decoration: none;</span><br><span class="line">    cursor: pointer;</span><br><span class="line">    font-family: &quot;\5FAE\8F6F\96C5\9ED1&quot;, Helvetica, &quot;黑体&quot;, Arial, Tahoma</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.main_box&#123;max-width: 640px; height: 100%; position: relative; margin: 0 auto;font-family: &quot;\5FAE\8F6F\96C5\9ED1&quot;, Helvetica, &quot;黑体&quot;, Arial, Tahoma&#125;</span><br><span class="line">.main_box .box&#123;height:40%; width: 90%;  position: absolute;left: 5%; top: 5em; background: #ffb8e5; border-radius: 10px;-webkit-border-radius: 10px;&#125;</span><br><span class="line"></span><br><span class="line">.main_box .box .bg_in&#123;position: absolute; left: 0.3rem; top: 0.3rem; bottom: 0.3rem; right: 0.3rem; background: #ffe4f3;border-radius: 6px;-webkit-border-radius: 6px;&#125;</span><br><span class="line">.main_box .box .bg_in .title&#123;color: #fd0196;font-size: 0.9rem;text-align: center; padding: 0.25rem 0;&#125;</span><br><span class="line">.main_box .box .content&#123;z-index: 10;position: relative; width: 13rem; height: 6rem;  margin: 2rem auto 0 auto; background:#f30086;border-radius: 6px;-webkit-border-radius: 6px;&#125;</span><br><span class="line">#mask_img_bg&#123;position: absolute; left: 0.2rem; top: 0.2rem; bottom: 0.2rem; right: 0.2rem; background:#fff;border-radius: 6px;-webkit-border-radius: 6px;&#125;</span><br><span class="line">#mask_img_bg img&#123;width:5.3rem; height: 5.5rem; margin: 0 auto;display: block; &#125;</span><br><span class="line">#redux&#123;z-index: 22; position: absolute;padding: 0.2rem; box-sizing: border-box; width:100%; height: 100%;border-radius: 6px;-webkit-border-radius: 6px;&#125;</span><br><span class="line">.main_box .show&#123;display: none; position: absolute;left:50%; top:6rem; width: 286px; height: 245px; margin-left: -143px;z-index: 99;&#125;</span><br><span class="line">.main_box .show .show_bg&#123;width: 286px; height: 245px;&#125;</span><br><span class="line">.main_box .show .show_bg1&#123;width: 239px; height: 138px;position: absolute; top: -20px; left: 50%;margin-left: -120px;z-index: 110;&#125;</span><br><span class="line">.main_box .show .show_food&#123;width:116.5px; height: 121.5px;position: absolute; top: 74px; left: 50%;margin-left: -60px;z-index: 100;&#125;</span><br><span class="line">.main_box .show .close&#123;display: inline-block;width: 32px; height:32px;position: absolute; top: 0; right:0;z-index: 200;&#125;</span><br><span class="line">.main_box .show .btn&#123;display: inline-block;width: 180px; height:37px;position: absolute; bottom: 10px; left: 48px;z-index: 200;&#125;</span><br><span class="line">.main_box .mask&#123;display: none; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5);z-index: 98;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="基础JS部分"><a href="#基础JS部分" class="headerlink" title="基础JS部分"></a>基础JS部分</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">* Usage:</span><br><span class="line">* $(&#39;#myImage&#39;).eraser(); &#x2F;&#x2F; simple way</span><br><span class="line">*</span><br><span class="line">* $(#canvas&#39;).eraser( &#123;</span><br><span class="line">*   size: 20, &#x2F;&#x2F; define brush size (default value is 40)</span><br><span class="line">*   completeRatio: .65, &#x2F;&#x2F; allows to call function when a erased ratio is reached (between 0 and 1, default is .7 )</span><br><span class="line">*   completeFunction: myFunction &#x2F;&#x2F; callback function when complete ratio is reached</span><br><span class="line">* &#125; );</span><br><span class="line">*</span><br><span class="line">* $(&#39;#image&#39;).eraser( &#39;clear&#39; ); &#x2F;&#x2F; erases all canvas content 清除画布</span><br><span class="line">*</span><br><span class="line">* $(&#39;#image&#39;).eraser( &#39;reset&#39; ); &#x2F;&#x2F; revert back to original content 重置画布</span><br><span class="line">*</span><br><span class="line">* $(&#39;#image&#39;).eraser( &#39;size&#39;, 80 ); &#x2F;&#x2F; change the eraser size  设置橡皮擦大小</span><br><span class="line">*&#x2F;</span><br><span class="line"></span><br><span class="line">(function( $ )&#123;</span><br><span class="line">var methods &#x3D; &#123;</span><br><span class="line">    init : function( options ) &#123;</span><br><span class="line">        return this.each(function()&#123;</span><br><span class="line">            var $this &#x3D; $(this),</span><br><span class="line">                data &#x3D; $this.data(&#39;eraser&#39;);</span><br><span class="line"></span><br><span class="line">            if ( !data ) &#123;</span><br><span class="line">                var width &#x3D; $this.width(),</span><br><span class="line">                    height &#x3D; $this.height(),</span><br><span class="line">                    pos &#x3D; $this.offset(),</span><br><span class="line">                    $canvas &#x3D; $(&quot;&lt;canvas&#x2F;&gt;&quot;),</span><br><span class="line">                    canvas &#x3D; $canvas.get(0),</span><br><span class="line">                    size &#x3D; ( options &amp;&amp; options.size )?options.size:40,</span><br><span class="line">                    completeRatio &#x3D; ( options &amp;&amp; options.completeRatio )?options.completeRatio:.7,</span><br><span class="line">                    completeFunction &#x3D; ( options &amp;&amp; options.completeFunction )?options.completeFunction:null,</span><br><span class="line">                    parts &#x3D; [],</span><br><span class="line">                    colParts &#x3D; Math.floor( width &#x2F; size ),</span><br><span class="line">                    numParts &#x3D; colParts * Math.floor( height &#x2F; size ),</span><br><span class="line">                    n &#x3D; numParts,</span><br><span class="line">                    ctx &#x3D; canvas.getContext(&quot;2d&quot;);</span><br><span class="line"></span><br><span class="line">                &#x2F;&#x2F; replace target with canvas</span><br><span class="line">                $this.after( $canvas );</span><br><span class="line">                canvas.id &#x3D; this.id;</span><br><span class="line">                canvas.className &#x3D; this.className;</span><br><span class="line">                canvas.width &#x3D; width;</span><br><span class="line">                canvas.height &#x3D; height;</span><br><span class="line">                ctx.drawImage( this, 0, 0 ,width ,height );</span><br><span class="line">                $this.remove();</span><br><span class="line"></span><br><span class="line">                &#x2F;&#x2F; prepare context for drawing operations</span><br><span class="line">                ctx.globalCompositeOperation &#x3D; &quot;destination-out&quot;;</span><br><span class="line">                ctx.strokeStyle &#x3D; &#39;rgba(255,0,0,255)&#39;;</span><br><span class="line">                ctx.lineWidth &#x3D; size;</span><br><span class="line"></span><br><span class="line">                ctx.lineCap &#x3D; &quot;round&quot;;</span><br><span class="line">                &#x2F;&#x2F; bind events</span><br><span class="line">                $canvas.bind(&#39;mousedown.eraser&#39;, methods.mouseDown);</span><br><span class="line">                $canvas.bind(&#39;touchstart.eraser&#39;, methods.touchStart);</span><br><span class="line">                $canvas.bind(&#39;touchmove.eraser&#39;, methods.touchMove);</span><br><span class="line">                $canvas.bind(&#39;touchend.eraser&#39;, methods.touchEnd);</span><br><span class="line"></span><br><span class="line">                &#x2F;&#x2F; reset parts</span><br><span class="line">                while( n-- ) parts.push(1);</span><br><span class="line"></span><br><span class="line">                &#x2F;&#x2F; store values</span><br><span class="line">                data &#x3D; &#123;</span><br><span class="line">                    posX:pos.left,</span><br><span class="line">                    posY:pos.top,</span><br><span class="line">                    touchDown: false,</span><br><span class="line">                    touchID:-999,</span><br><span class="line">                    touchX: 0,</span><br><span class="line">                    touchY: 0,</span><br><span class="line">                    ptouchX: 0,</span><br><span class="line">                    ptouchY: 0,</span><br><span class="line">                    canvas: $canvas,</span><br><span class="line">                    ctx: ctx,</span><br><span class="line">                    w:width,</span><br><span class="line">                    h:height,</span><br><span class="line">                    source: this,</span><br><span class="line">                    size: size,</span><br><span class="line">                    parts: parts,</span><br><span class="line">                    colParts: colParts,</span><br><span class="line">                    numParts: numParts,</span><br><span class="line">                    ratio: 0,</span><br><span class="line">                    complete: false,</span><br><span class="line">                    completeRatio: completeRatio,</span><br><span class="line">                    completeFunction: completeFunction</span><br><span class="line">                &#125;;</span><br><span class="line">                $canvas.data(&#39;eraser&#39;, data);</span><br><span class="line"></span><br><span class="line">                &#x2F;&#x2F; listen for resize event to update offset values</span><br><span class="line">                $(window).resize( function() &#123;</span><br><span class="line">                    var pos &#x3D; $canvas.offset();</span><br><span class="line">                    data.posX &#x3D; pos.left;</span><br><span class="line">                    data.posY &#x3D; pos.top;</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    touchStart: function( event ) &#123;</span><br><span class="line">        var $this &#x3D; $(this),</span><br><span class="line">            data &#x3D; $this.data(&#39;eraser&#39;);</span><br><span class="line"></span><br><span class="line">        if ( !data.touchDown ) &#123;</span><br><span class="line">            var t &#x3D; event.changedTouches[0],</span><br><span class="line">                tx &#x3D; t.pageX - data.posX,</span><br><span class="line">                ty &#x3D; t.pageY - data.posY;</span><br><span class="line">            methods.evaluatePoint( data, tx, ty );</span><br><span class="line">            data.touchDown &#x3D; true;</span><br><span class="line">            data.touchID &#x3D; t.identifier;</span><br><span class="line">            data.touchX &#x3D; tx;</span><br><span class="line">            data.touchY &#x3D; ty;</span><br><span class="line">            event.preventDefault();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    touchMove: function( event ) &#123;</span><br><span class="line">        var $this &#x3D; $(this),</span><br><span class="line">            data &#x3D; $this.data(&#39;eraser&#39;);</span><br><span class="line"></span><br><span class="line">        if ( data.touchDown ) &#123;</span><br><span class="line">            var ta &#x3D; event.changedTouches,</span><br><span class="line">                n &#x3D; ta.length;</span><br><span class="line">            while( n-- )</span><br><span class="line">                if ( ta[n].identifier &#x3D;&#x3D; data.touchID ) &#123;</span><br><span class="line">                    var tx &#x3D; ta[n].pageX - data.posX,</span><br><span class="line">                        ty &#x3D; ta[n].pageY - data.posY;</span><br><span class="line">                    methods.evaluatePoint( data, tx, ty );</span><br><span class="line">                    data.ctx.beginPath();</span><br><span class="line">                    data.ctx.moveTo( data.touchX, data.touchY );</span><br><span class="line">                    data.touchX &#x3D; tx;</span><br><span class="line">                    data.touchY &#x3D; ty;</span><br><span class="line">                    data.ctx.lineTo( data.touchX, data.touchY );</span><br><span class="line">                    data.ctx.stroke();</span><br><span class="line">                    event.preventDefault();</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    touchEnd: function( event ) &#123;</span><br><span class="line">        var $this &#x3D; $(this),</span><br><span class="line">            data &#x3D; $this.data(&#39;eraser&#39;);</span><br><span class="line"></span><br><span class="line">        if ( data.touchDown ) &#123;</span><br><span class="line">            var ta &#x3D; event.changedTouches,</span><br><span class="line">                n &#x3D; ta.length;</span><br><span class="line">            while( n-- )</span><br><span class="line">                if ( ta[n].identifier &#x3D;&#x3D; data.touchID ) &#123;</span><br><span class="line">                    data.touchDown &#x3D; false;</span><br><span class="line">                    event.preventDefault();</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    evaluatePoint: function( data, tx, ty ) &#123;</span><br><span class="line">        var p &#x3D; Math.floor(tx&#x2F;data.size) + Math.floor( ty &#x2F; data.size ) * data.colParts;</span><br><span class="line">        if ( p &gt;&#x3D; 0 &amp;&amp; p &lt; data.numParts ) &#123;</span><br><span class="line">            data.ratio +&#x3D; data.parts[p];</span><br><span class="line">            data.parts[p] &#x3D; 0;</span><br><span class="line">            if ( !data.complete) &#123;</span><br><span class="line">                if ( data.ratio&#x2F;data.numParts &gt;&#x3D; data.completeRatio ) &#123;</span><br><span class="line">                    data.complete &#x3D; true;</span><br><span class="line">                    if ( data.completeFunction !&#x3D; null ) data.completeFunction();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;,</span><br><span class="line">    mouseDown: function( event ) &#123;</span><br><span class="line">        var $this &#x3D; $(this),</span><br><span class="line">            data &#x3D; $this.data(&#39;eraser&#39;),</span><br><span class="line">            tx &#x3D; event.pageX - data.posX,</span><br><span class="line">            ty &#x3D; event.pageY - data.posY;</span><br><span class="line">        methods.evaluatePoint( data, tx, ty );</span><br><span class="line">        data.touchDown &#x3D; true;</span><br><span class="line">        data.touchX &#x3D; tx;</span><br><span class="line">        data.touchY &#x3D; ty;</span><br><span class="line">        data.ctx.beginPath();</span><br><span class="line">        data.ctx.moveTo( data.touchX-1, data.touchY );</span><br><span class="line">        data.ctx.lineTo( data.touchX, data.touchY );</span><br><span class="line">        data.ctx.stroke();</span><br><span class="line">        $this.bind(&#39;mousemove.eraser&#39;, methods.mouseMove);</span><br><span class="line">        $(document).bind(&#39;mouseup.eraser&#39;, data, methods.mouseUp);</span><br><span class="line">        event.preventDefault();</span><br><span class="line">    &#125;,</span><br><span class="line">    mouseMove: function( event ) &#123;</span><br><span class="line">        var $this &#x3D; $(this),</span><br><span class="line">            data &#x3D; $this.data(&#39;eraser&#39;),</span><br><span class="line">            tx &#x3D; event.pageX - data.posX,</span><br><span class="line">            ty &#x3D; event.pageY - data.posY;</span><br><span class="line">        methods.evaluatePoint( data, tx, ty );</span><br><span class="line">        data.ctx.beginPath();</span><br><span class="line">        data.ctx.moveTo( data.touchX, data.touchY );</span><br><span class="line">        data.touchX &#x3D; tx;</span><br><span class="line">        data.touchY &#x3D; ty;</span><br><span class="line">        data.ctx.lineTo( data.touchX, data.touchY );</span><br><span class="line">        data.ctx.stroke();</span><br><span class="line">        event.preventDefault();</span><br><span class="line">    &#125;,</span><br><span class="line">    mouseUp: function( event ) &#123;</span><br><span class="line">        var data &#x3D; event.data,</span><br><span class="line">            $this &#x3D; data.canvas;</span><br><span class="line">        data.touchDown &#x3D; false;</span><br><span class="line">        $this.unbind(&#39;mousemove.eraser&#39;);</span><br><span class="line">        $(document).unbind(&#39;mouseup.eraser&#39;);</span><br><span class="line">        event.preventDefault();</span><br><span class="line">    &#125;,</span><br><span class="line">    clear: function() &#123;</span><br><span class="line">        var $this &#x3D; $(this),</span><br><span class="line">            data &#x3D; $this.data(&#39;eraser&#39;);</span><br><span class="line">        if ( data )</span><br><span class="line">        &#123;</span><br><span class="line">            data.ctx.clearRect( 0, 0, data.w, data.h );</span><br><span class="line">            var n &#x3D; data.numParts;</span><br><span class="line">            while( n-- ) data.parts[n] &#x3D; 0;</span><br><span class="line">            data.ratio &#x3D; data.numParts;</span><br><span class="line">            data.complete &#x3D; true;</span><br><span class="line">            if ( data.completeFunction !&#x3D; null ) data.completeFunction();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    size: function(value) &#123;</span><br><span class="line">        var $this &#x3D; $(this),</span><br><span class="line">            data &#x3D; $this.data(&#39;eraser&#39;);</span><br><span class="line">        if ( data &amp;&amp; value )</span><br><span class="line">        &#123;</span><br><span class="line">            data.size &#x3D; value;</span><br><span class="line">            data.ctx.lineWidth &#x3D; value;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    reset: function() &#123;</span><br><span class="line">        var $this &#x3D; $(this),</span><br><span class="line">            data &#x3D; $this.data(&#39;eraser&#39;);</span><br><span class="line">        if ( data )</span><br><span class="line">        &#123;</span><br><span class="line">            data.ctx.globalCompositeOperation &#x3D; &quot;source-over&quot;;</span><br><span class="line">            data.ctx.drawImage( data.source, 0, 0 );</span><br><span class="line">            data.ctx.globalCompositeOperation &#x3D; &quot;destination-out&quot;;</span><br><span class="line">            var n &#x3D; data.numParts;</span><br><span class="line">            while( n-- ) data.parts[n] &#x3D; 1;</span><br><span class="line">            data.ratio &#x3D; 0;</span><br><span class="line">            data.complete &#x3D; false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">$.fn.eraser &#x3D; function( method ) &#123;</span><br><span class="line">    if ( methods[method] ) &#123;</span><br><span class="line">        return methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));</span><br><span class="line">    &#125; else if ( typeof method &#x3D;&#x3D;&#x3D; &#39;object&#39; || ! method ) &#123;</span><br><span class="line">        return methods.init.apply( this, arguments );</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        $.error( &#39;Method &#39; +  method + &#39; does not yet exist on Zepto.eraser&#39; );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&#125;)( Zepto );</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="初始化画布"><a href="#初始化画布" class="headerlink" title="初始化画布"></a>初始化画布</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$(window).on(&#39;load&#39;,function()&#123;</span><br><span class="line">    $(&#39;#redux&#39;).eraser( &#123;</span><br><span class="line">        size: 20,   &#x2F;&#x2F;设置橡皮擦大小</span><br><span class="line">        completeRatio: .6, &#x2F;&#x2F;设置擦除面积比例</span><br><span class="line">        completeFunction: showResetButton   &#x2F;&#x2F;大于擦除面积比例触发函数</span><br><span class="line">    &#125;);</span><br><span class="line">    function showResetButton()&#123;</span><br><span class="line">        $(&quot;.main_box .show,.main_box .mask&quot;).fadeIn(300)</span><br><span class="line">    &#125;</span><br><span class="line">    $(&quot;.main_box .mask,.main_box .show .close,.main_box .show .btn&quot;).click(function  () &#123;</span><br><span class="line">        $(&quot;.main_box .show,.main_box .mask&quot;).fadeOut(300)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>写到这里，整个刮刮卡已经完成了。可是小编在开发过程中，发现几个比较坑爹的地方。给大家简单介绍下，<br>你们可以看看自己有没有这样的类似问题。</p>
+<p>坑1: 用过canvas的小伙伴都知道，在使用drawImage的时候，如果图片渲染没有完成，会出现绘图失败情况。<br>所以小编自己做的时候，是在点击“点我刮奖”按钮之后进行的绘图。</p>
+<p>坑2: 关于重绘的reset方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">reset: function() &#123;</span><br><span class="line">    var $this &#x3D; $(this),</span><br><span class="line">        data &#x3D; $this.data(&#39;eraser&#39;);</span><br><span class="line">    if ( data )</span><br><span class="line">        &#123;</span><br><span class="line">            data.ctx.globalCompositeOperation &#x3D; &quot;source-over&quot;;</span><br><span class="line">            data.ctx.drawImage( data.source, 0, 0 );    </span><br><span class="line">            data.ctx.globalCompositeOperation &#x3D; &quot;destination-out&quot;;</span><br><span class="line">            var n &#x3D; data.numParts;</span><br><span class="line">            while( n-- ) data.parts[n] &#x3D; 1;</span><br><span class="line">            data.ratio &#x3D; 0;</span><br><span class="line">            data.complete &#x3D; false;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>大家都知道，如果抽奖完成一次之后，要对canvas画布二次重绘。这个封装的方法中，直接调用reset方法，即可实现。<br>但是会发现你的默认图片二次重绘会变形，不是你默认图片样式。<br>是因为这个地方调用了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data.ctx.drawImage( data.source, 0, 0 );</span><br></pre></td></tr></table></figure>
+<p>但事实上，这个方法一共可接收多个，这里传了三个，改成如下，即可实现</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data.ctx.drawImage( data.source, 0, 0 ,data.w, data.h);</span><br></pre></td></tr></table></figure>
+
+<p>顺便普及下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">context.drawImage(img,x,y);  &#x2F;&#x2F;在画布上定位图像</span><br><span class="line"></span><br><span class="line">context.drawImage(img,x,y,width,height);  &#x2F;&#x2F;在画布上定位图像，并规定图像的宽度和高度</span><br><span class="line"></span><br><span class="line">context.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);  &#x2F;&#x2F;剪切图像，并在画布上定位被剪切的部分</span><br></pre></td></tr></table></figure>
+
+<p>到这里，关于这个刮奖活动就结束了。如果有任何不对的地方，希望各位不吝指出，谢谢</p>
 
     
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你喜欢我的文章<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          石小鑫
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://yoursite.com/2018/02/08/zepto-lottery-canvas/" title="zepto-canvas刮刮卡效果" target="_blank">http://yoursite.com/2018/02/08/zepto-lottery-canvas/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/抽奖活动//" class="article-tag-list-link color5">抽奖活动</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/02/08/zepto-lottery-canvas/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+    <a href="/2018/02/22/es6(1)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          ES6/ES2015核心内容(上)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/12/28/nginx-config/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">nginx使用及常用配置</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -271,8 +485,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,

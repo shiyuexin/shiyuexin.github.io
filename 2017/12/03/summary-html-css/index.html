@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/4 | 石小鑫的博客</title>
+  <title>HTML+CSS常见问题 | 石小鑫的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="石小鑫的博客 Web前端技术 H5前端前端技术 react redux es6 easyui css html5 jquery javascript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="石小鑫的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2020/04/index.html">
+  <meta name="description" content="html+css常见问题总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML+CSS常见问题">
+<meta property="og:url" content="http://yoursite.com/2017/12/03/summary-html-css/index.html">
 <meta property="og:site_name" content="石小鑫的博客">
-<meta property="og:description" content="石小鑫的博客 Web前端技术 H5前端前端技术 react redux es6 easyui css html5 jquery javascript">
+<meta property="og:description" content="html+css常见问题总结">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2017-12-02T16:00:00.000Z">
+<meta property="article:modified_time" content="2019-03-11T13:23:09.267Z">
 <meta property="article:author" content="石小鑫">
 <meta name="twitter:card" content="summary">
   
@@ -183,54 +185,385 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-summary-html-css" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/10/hexo%E7%BC%96%E8%BE%91%E5%8F%91%E5%B8%83/" class="archive-article-date">
-        <time datetime="2020-04-10T06:16:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/10/hexo%E7%BC%96%E8%BE%91%E5%8F%91%E5%B8%83/" target="_blank">hexo编辑发布</a>
   
+    <h1 class="article-title" itemprop="name">
+      HTML+CSS常见问题
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-          
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+<a href="/2017/12/03/summary-html-css/" class="archive-article-date">
+        <time datetime="2017-12-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-03</time>
+</a>
+
   
   
-    </div></section>
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">8.7k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">33分</span>
+    </span>
+  </span>
+</div>
+
+
   
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在日常工作和项目中，我们关注点一直停留在常用的部分。导致很多细节知识被忽视，<br>这篇文章是楼楼抽时间总结的HTML+CSS常见问题,也是一个复习巩固，希望对大家也能有帮助</p>
+<a id="more"></a>
+<h3 id="行内元素和块级元素是什么"><a href="#行内元素和块级元素是什么" class="headerlink" title="行内元素和块级元素是什么?"></a>行内元素和块级元素是什么?</h3><p>在标注文档流里</p>
+<p>1.块级元素:总是在新行上开始，高度、行高及外边距和内边距都可控制，可以容纳内联元素和其他元素<br>包含（div  , p  , form,   ul,  li ,  ol, dl,    form,   address,  fieldset,  hr, menu,  table）</p>
+<p>2.行内元素:和有他元素都在一行上，高度、行高及外边距和内边距都不可改变，文字图片的宽度不可改变，只能容纳文本或者其他行内元素<br>包含（span,   strong,   em,  br,  img ,  input,  label,  select,  textarea,  cite）</p>
+<p>行元素转换为块级元素方式：display：block；</p>
+<h3 id="将多个元素设置为同一行-清除浮动有几种方式"><a href="#将多个元素设置为同一行-清除浮动有几种方式" class="headerlink" title="将多个元素设置为同一行?清除浮动有几种方式?"></a>将多个元素设置为同一行?清除浮动有几种方式?</h3><p>将多个元素设置为同一行：float，inline-block</p>
+<p>清除浮动的方式：<br>1.添加新的元素 、应用 clear：both；<br>2.父级div定义 overflow: hidden；<br>3.利用:after和:before来在元素内部插入两个元素块，从面达到清除浮动的效果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.clear&#123;zoom:1;&#125;</span><br><span class="line">.clear:after&#123;content:””;clear:both;display:block;height:0;overflow:hidden;visibility:hidden;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="怪异盒模型box-sizing？弹性盒模型-盒布局"><a href="#怪异盒模型box-sizing？弹性盒模型-盒布局" class="headerlink" title="怪异盒模型box-sizing？弹性盒模型|盒布局?"></a>怪异盒模型box-sizing？弹性盒模型|盒布局?</h3><p>在标准模式下的盒模型：盒子总宽度/高度=width/height+padding+border+margin<br>在怪异模式下的盒模型下，盒子的总宽度和高度是包含内边距padding和边框border宽度在内的，<br>盒子总宽度/高度=width/height + margin = 内容区宽度/高度 + padding + border + margin;<br>box-sizing有两个值一个是content-box，另一个是border-box。<br>当设置为box-sizing:content-box时，将采用标准模式解析计算；<br>当设置为box-sizing:border-box时，将采用怪异模式解析计算。</p>
+<h3 id="简述几个css-hack"><a href="#简述几个css-hack" class="headerlink" title="简述几个css hack?"></a>简述几个css hack?</h3><p>(1) 图片间隙<br>在div中插入图片，图片会将div下方撑大3px。hack1：将<div>与<img>写在同一行。hack2：给<img>添加display：block；<br>dt li 中的图片间隙。hack：给<img>添加display：block；<br>(2) 默认高度，IE6以下版本中，部分块元素，拥有默认高度（低于18px）<br>hack1：给元素添加：font-size：0；<br>hack2：声明：overflow：hidden；<br>表单行高不一致<br>hack1：给表单添加声明：float：left；height： ；border： 0；<br>鼠标指针<br>hack：若统一某一元素鼠标指针为手型：cursor：pointer；<br>当li内的a转化块元素时，给a设置float，IE里面会出现阶梯状<br>hack1：给a加display：inline-block；<br>hack2：给li加float：left；</p>
+<h3 id="href和src区别-title和alt"><a href="#href和src区别-title和alt" class="headerlink" title="href和src区别? title和alt"></a>href和src区别? title和alt</h3><p>href (Hypertext Reference)指定网络资源的位置（超文本引用），从而在当前元素或者当前文档和由当前属性定义的需要的锚点或资源之间定义一个链接或者关系，在 link和a 等元素上使用。<br>src (Source)属性仅仅嵌入当前资源到当前文档元素定义的位置，是页面必不可少的一部分，是引入。在 img、script、iframe 等元素上使用。<br>title：既是html标签，又是html属性，title作为属性时，用来为元素提供额外说明信息.<br>alt：alt是html标签的属性，alt属性则是用来指定替换文字，只能用在img、area和input元素中（包括applet元素），用于网页中图片无法正常显示时给用户提供文字说明使其了解图像信息.</p>
+<h3 id="transform？animation？区别-animation-duration"><a href="#transform？animation？区别-animation-duration" class="headerlink" title="transform？animation？区别?animation-duration"></a>transform？animation？区别?animation-duration</h3><p>Transform:它和width、left一样，定义了元素很多静态样式实现变形、旋转、缩放、移位及透视等功能，通过一系列功能的组合我们可以实现很炫酷的静态效果（非动画)。<br>Animation:作用于元素本身而不是样式属性,属于关键帧动画的范畴，它本身被用来替代一些纯粹表现的javascript代码而实现动画,可以通过keyframe显式控制当前帧的属性值.<br>animation-duration：规定完成动画所花费的时间，以秒或毫秒计。</p>
+<h3 id="nth-of-type-nth-child"><a href="#nth-of-type-nth-child" class="headerlink" title="nth-of-type | nth-child?"></a>nth-of-type | nth-child?</h3><p>举例说明： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt; </span><br><span class="line">    &lt;p&gt;111&lt;&#x2F;p&gt; </span><br><span class="line">    &lt;span&gt;222&lt;&#x2F;span&gt; </span><br><span class="line">    &lt;li&gt;1&lt;&#x2F;li&gt; </span><br><span class="line">    &lt;li&gt;2&lt;&#x2F;li&gt; </span><br><span class="line">    &lt;li&gt;3&lt;&#x2F;li&gt; </span><br><span class="line">&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
+<p>li:nth-of-type(2):表示ul下的第二个li元素<br>li:nth-child(2)：表示既是li元素又是在ul下的第二个元素（找不到）。<br>建议一般使用nth-of-type，不容易出问题。</p>
+<h3 id="before-和-before-区别"><a href="#before-和-before-区别" class="headerlink" title=":before 和 ::before 区别?"></a>:before 和 ::before 区别?</h3><p>单冒号(:)用于CSS3伪类，双冒号(::)用于CSS3伪元素。<br>对于CSS2之前已有的伪元素，比如:before，单冒号和双冒号的写法::before作用是一样的。</p>
+<h3 id="如何让一个div-上下左右居中"><a href="#如何让一个div-上下左右居中" class="headerlink" title="如何让一个div 上下左右居中?"></a>如何让一个div 上下左右居中?</h3><p>答：有三种方法。<br>方法1： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.div1&#123; width:400px;  height:400px;  border:#CCC 1px solid;   background:#99f;  position:absolute;  left:50%;   top:50%;   transform: translate(-50%,-50%); &#125;   &lt;div class&#x3D;&quot;div1&quot;&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<p>方法2： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.div2&#123; width:400px;  height:400px;  border:#CCC 1px solid;  background:#99f;  position: absolute;  left:0;  top: 0;  bottom: 0;  right: 0;  margin: auto; &#125;  &lt;div class&#x3D;&quot;div2&quot;&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>方法3： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.div3&#123; width:400px;  height:400px;  border:#CCC 1px solid;  background:#9f9;  position: absolute;  left: 50%;  top:50%;  margin-left:-200px;  margin-top: -200px;  &#125;   &lt;div class&#x3D;&quot;div3&quot;&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="css2-0-和css3-0"><a href="#css2-0-和css3-0" class="headerlink" title="css2.0 和css3.0"></a>css2.0 和css3.0</h3><p>答：css3加强了css2的功能，增加了新的属性和新的标签，并且删除了一些冗余的标签，在布局方面减少了代码量。<br>以前比较复杂的布局现在一个属性就搞定了（columns之类的属性）。在效果方面加入了更多的效果(圆角，动画之类的)，<br>还有在盒子模型和列表模块都进行了改进。不过CSS3兼容性不好，只有一些高级版本的浏览器支持。</p>
+<h3 id="弹性盒子模型-flex-box区别"><a href="#弹性盒子模型-flex-box区别" class="headerlink" title="弹性盒子模型?flex|box区别?"></a>弹性盒子模型?flex|box区别?</h3><p>(1) 引入弹性盒布局模型的目的是提供一种更加有效的方式来对一个容器中的条目进行排列、对齐和分配空白空间。</p>
+<p>即便容器中条目的尺寸未知或是动态变化的，弹性盒布局模型也能正常的工作。在该布局模型中，容器会根据布局的需要，调整其中包含的条目的尺寸和顺序来最好地填充所有可用的空间。</p>
+<p>当容器的尺寸由于屏幕大小或窗口尺寸发生变化时，其中包含的条目也会被动态地调整。比如当容器尺寸变大时，其中包含的条目会被拉伸以占满多余的空白空间；当容器尺寸变小时，条目会被缩小以防止超出容器的范围。弹性盒布局是与方向无关的。</p>
+<p>在传统的布局方式中，block 布局是把块在垂直方向从上到下依次排列的；<br>而 inline 布局则是在水平方向来排列。弹性盒布局并没有这样内在的方向限制，可以由开发人员自由操作。 </p>
+<p>(2) flex和box的区别: display：box 是老规范，要兼顾古董机子就加上它； 父级元素有display:box;属性之后。他的子元素里面加上box-flex属性。可以让子元素按照父元素的宽度进行一定比例的分占空间。 flex是最新的，董机老机子不支持的；</p>
+<p>父元素设置display:flex后，子元素宽度会随父元素宽度的改变而改变，而display:box不会。 Android UC浏览器只支持display: box语法；而iOS UC浏览器则支持两种方式。</p>
+<h3 id="viewport-所有属性-？"><a href="#viewport-所有属性-？" class="headerlink" title="viewport 所有属性 ？"></a>viewport 所有属性 ？</h3><p>(1)width :设置layout viewport的宽度，为一个正整数，或字符串’device-width’;<br>(2)initial-scale:设置页面的初始缩放值，为一个数字，可以带小数。<br>(3)minimum-scale:允许用户的最小缩放值，为一个数字，可以带小数。<br>(4)maximum-scale:允许用户的最大缩放值，为一个数字，可以带小数。<br>(5)height:设置layout viewport的高度，这个属性对我们并不重要，很少使用<br>(6)user-scalable:是否允许用户进行缩放，值为‘no’或者‘yes’。<br>安卓中还支持：target-densitydpi，表示目标设备的密度等级，作用是决定css中的1px 代表多少物理像素<br>(7)target-densitydpi:值可以为一个数值或者 high-dpi 、 medium-dpi、 low-dpi、 device-dpi 这几个字符串中的一个</p>
+<h3 id="如何理解HTML结构的语义化？"><a href="#如何理解HTML结构的语义化？" class="headerlink" title="如何理解HTML结构的语义化？"></a>如何理解HTML结构的语义化？</h3><p>所谓标签语义化，就是指标签的含义。语义化的主要目的就是让大家直观的认识标签(markup)和属性(attribute)的用途和作用，对搜索引擎友好，有了良好的结构和语义我们的网页内容便自然容易被搜索引擎抓取，这种符合搜索引擎收索规则的做法，网站的推广便可以省下不少的功夫，而且可维护性更高，因为结构清晰,十分易于阅读。这也是搜索引擎优化SEO重要的一步。</p>
+<h3 id="伪类选择器和伪元素？c3中引入的伪类选择器有？c3中伪元素有"><a href="#伪类选择器和伪元素？c3中引入的伪类选择器有？c3中伪元素有" class="headerlink" title="伪类选择器和伪元素？c3中引入的伪类选择器有？c3中伪元素有?"></a>伪类选择器和伪元素？c3中引入的伪类选择器有？c3中伪元素有?</h3><p>伪类用一个冒号来表示，而伪元素则用两个冒号来表示。</p>
+<p>伪类选择器：<br>由于状态是动态变化的，所以一个元素达到一个特定状态时，它可能得到一个伪类的样式；当状态改变时，它又会失去这个样式。</p>
+<p>伪元素选择器：<br>并不是针对真正的元素使用的选择器，而是针对CSS中已经定义好的伪元素使用的选择器；</p>
+<p>c3中引入的伪类选择器：<br>:root()选择器，根选择器，匹配元素E所在文档的根元素。在HTML文档中，根元素始终是<html>。:root选择器等同于<html>元素。</p>
+<p>:not()选择器称为否定选择器，和jQuery中的:not选择器一模一样，可以选择除某个元素之外的所有元素。</p>
+<p>:empty()选择器表示的就是空。用来选择没有任何内容的元素，这里没有内容指的是一点内容都没有，哪怕是一个空格。</p>
+<p>:target()选择器来对页面某个target元素(该元素的id被当做页面中的超链接来使用)指定样式，该样式只在用户点击了页面中的超链接，并且跳转到target元素后起作用。</p>
+<p>:first-child()选择器表示的是选择父元素的第一个子元素的元素E。简单点理解就是选择元素中的第一个子元素，记住是子元素，而不是后代元素。</p>
+<p>:nth-child()选择某个元素的一个或多个特定的子元素。</p>
+<p>:nth-last-child()从某父元素的最后一个子元素开始计算，来选择特定的元素</p>
+<p>:nth-of-type(n)选择器和:nth-child(n)选择器非常类似，不同的是它只计算父元素中指定的某种类型的子元素。</p>
+<p>:only-child表示的是一个元素是它的父元素的唯一一个子元素。</p>
+<p>:first-line为某个元素的第一行文字使用样式。</p>
+<p>:first-letter 为某个元素中的文字的首字母或第一个字使用样式。</p>
+<p>:before 在某个元素之前插入一些内容。</p>
+<p>:after 在某个元素之后插入一些内容。 </p>
+<p>c3中伪元素：<br>::first-line选择元素的第一行，比如说改变每个段落的第一行文本的样式<br>::before和::after这两个主要用来给元素的前面或后面插入内容，这两个常用”content”配合使用，见过最多的就是清除浮动<br>::selection用来改变浏览网页选中文的默认效果</p>
+<h3 id="html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分-HTML-和-HTML5？"><a href="#html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分-HTML-和-HTML5？" class="headerlink" title="html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？"></a>html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</h3><ul>
+<li>HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。 </li>
+<li>拖拽释放(Drag and drop) API 语义化更好的内容标签(header,nav,footer,aside,article,section) 音频、视频API(audio,video) 画布(Canvas) API 地理(Geolocation) API 本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失；<br>sessionStorage 的数据在浏览器关闭后自动删除 表单控件，calendar、date、time、email、url、search 新的技术webworker, websocket, Geolocation </li>
+<li>移除的元素 纯表现的元素：basefont，big，center，font, s，strike，tt，u；<br>对可用性产生负面影响的元素：frame，frameset，noframes；<br>支持HTML5新标签： </li>
+<li>IE8/IE7/IE6支持通过document.createElement方法产生的标签， 可以利用这一特性让这些浏览器支持HTML5新标签， 浏览器支持新标签后，还需要添加标签默认的样式： </li>
+<li>当然最好的方式是直接使用成熟的框架、使用最多的是html5shim框架<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--[if lt IE 9]&gt; &lt;script&gt; src&#x3D;&quot;http:&#x2F;&#x2F;html5shim.googlecode.com&#x2F;svn&#x2F;trunk&#x2F;html5.js&quot;&lt;&#x2F;script&gt; &lt;![endif]--&gt;</span><br></pre></td></tr></table></figure></li>
+<li>如何区分： DOCTYPE声明\新增的结构元素\功能元素</li>
+</ul>
+<h3 id="placeholder-如何在ie8上兼容placeholder这个效果"><a href="#placeholder-如何在ie8上兼容placeholder这个效果" class="headerlink" title="placeholder?如何在ie8上兼容placeholder这个效果"></a>placeholder?如何在ie8上兼容placeholder这个效果</h3><p>方法一：<br>首先判断浏览器是否支持placeholder属性，如果不支持的话，就遍历所有input输入框，获取placeholder属性的值填充进输入框作为提示信息，同时字体设置成灰色。</p>
+<p>当输入框获得焦点( focus )同时输入框内文字等于设置的提示信息时，就把输入框内清空；</p>
+<p>当输入框失去焦点( blur )同时输入框内文字为空时，再把获取的placeholder属性的值填充<br>进输入框作为提示信息，同时字体设置成灰色；</p>
+<p>当输入框内有输入( keydown )时，此时输入框内的提示信息已经由focus事件清除，此时只需要把字体再恢复成黑色即可</p>
+<p>此方法的缺点是，不适用于加载完DOM时即获得焦点的输入框，因为在用户的角度，加载完页面时看到的获得焦点的那个输入框，它的提示文字是看不到的。</p>
+<p>HTML：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;uname&quot; name&#x3D;&quot;uname&quot; placeholder&#x3D;&quot;请输入用户名&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>CSS：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.phcolor&#123; color:#999;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>JS</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">$(function()&#123;  </span><br><span class="line">  &#x2F;&#x2F;判断浏览器是否支持placeholder属性</span><br><span class="line">  supportPlaceholder&#x3D;&#39;placeholder&#39;in document.createElement(&#39;input&#39;),</span><br><span class="line">  placeholder&#x3D;function(input)&#123;</span><br><span class="line">    var text &#x3D; input.attr(&#39;placeholder&#39;),</span><br><span class="line">    defaultValue &#x3D; input.defaultValue;</span><br><span class="line">    if(!defaultValue)&#123;</span><br><span class="line">      input.val(text).addClass(&quot;phcolor&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    input.focus(function()&#123;</span><br><span class="line">      if(input.val() &#x3D;&#x3D; text)&#123;</span><br><span class="line">        $(this).val(&quot;&quot;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    input.blur(function()&#123;</span><br><span class="line">      if(input.val() &#x3D;&#x3D; &quot;&quot;)&#123;</span><br><span class="line">        $(this).val(text).addClass(&quot;phcolor&quot;);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    &#x2F;&#x2F;输入的字符不为灰色</span><br><span class="line">    input.keydown(function()&#123;</span><br><span class="line">      $(this).removeClass(&quot;phcolor&quot;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line">  &#x2F;&#x2F;当浏览器不支持placeholder属性时，调用placeholder函数</span><br><span class="line">  if(!supportPlaceholder)&#123;</span><br><span class="line">    $(&#39;input&#39;).each(function()&#123;</span><br><span class="line">      text &#x3D; $(this).attr(&quot;placeholder&quot;);</span><br><span class="line">      if($(this).attr(&quot;type&quot;) &#x3D;&#x3D; &quot;text&quot;)&#123;</span><br><span class="line">        placeholder($(this));</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>方法二：<br>此方法的思路是做一张含有提示文字的图片作为input输入框的背景图，初始时获得焦点同时加载背景图；<br>当输入框不为空时，去掉背景图；<br>当输入框为空时，加载背景图；<br>当用户键盘按键且输入框不为空( 输入字符 )时，去掉背景图；<br>当用户键盘按键且输入框为空( 删除字符 )时，加载背景图。<br>此方法的缺点是：需要为每一个提示文字不同的input制作背景图片，并且设置input的样式。<br>CSS：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.phbg&#123; background:url(img&#x2F;bg.jpg) 0 0 no-repeat;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>JS</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">$(function()&#123;  </span><br><span class="line">   &#x2F;&#x2F;判断浏览器是否支持placeholder属性</span><br><span class="line">   supportPlaceholder&#x3D;&#39;placeholder&#39; in document.createElement(&#39;input&#39;);</span><br><span class="line">   if(!supportPlaceholder)&#123;</span><br><span class="line">     &#x2F;&#x2F;初始状态添加背景图片</span><br><span class="line">     $(&quot;#uname&quot;).attr(&quot;class&quot;,&quot;phbg&quot;);</span><br><span class="line">     &#x2F;&#x2F;初始状态获得焦点</span><br><span class="line">     $(&quot;#uname&quot;).focus;</span><br><span class="line">     function destyle()&#123;</span><br><span class="line">      if($(&quot;#uname&quot;).val() !&#x3D; &quot;&quot;)&#123;</span><br><span class="line">        $(&quot;#uname&quot;).removeClass(&quot;phbg&quot;);</span><br><span class="line">      &#125;else&#123;</span><br><span class="line">        $(&quot;#uname&quot;).attr(&quot;class&quot;,&quot;phbg&quot;);</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;</span><br><span class="line">     &#x2F;&#x2F;当输入框为空时，添加背景图片；有值时去掉背景图片</span><br><span class="line">     destyle();</span><br><span class="line">     $(&quot;#uname&quot;).keyup(function()&#123;</span><br><span class="line">      &#x2F;&#x2F;当输入框有按键输入同时输入框不为空时，去掉背景图片；有按键输入同时为空时（删除字符），添加背景图片</span><br><span class="line">      destyle();</span><br><span class="line">     &#125;);</span><br><span class="line">     $(&quot;#uname&quot;).keydown(function()&#123;</span><br><span class="line">      &#x2F;&#x2F;keydown事件可以在按键按下的第一时间去掉背景图片</span><br><span class="line">      $(&quot;#uname&quot;).removeClass(&quot;phbg&quot;);</span><br><span class="line">     &#125;);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>方法三：<br>使用插件：Placeholders.js</p>
+<p>###常见兼容性问题？</p>
+<ul>
+<li><p>png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8.也可以引用一段脚本处理。</p>
+</li>
+<li><p>浏览器默认的margin和padding不同。解决方案是加一个全局的*{margin:0;padding:0;}来统一。</p>
+</li>
+<li><p>IE6双边距bug:块属性标签float后，又有横行的margin情况下，在ie6显示margin比设置的大。</p>
+</li>
+<li><p>浮动ie产生的双倍距离（IE6双边距问题：在IE6下，如果对元素设置了浮动，同时又设置了margin-left或margin-right，margin值会加倍。） #box{ float:left; width:10px; margin:0 0 0 100px;} 这种情况之下IE会产生20px的距离，解决方案是在float的标签样式控制中加入 ——_display:inline;将其转化为行内属性。(_这个符号只有ie6会识别)</p>
+</li>
+<li><p>渐进识别的方式，从总体中逐渐排除局部。 首先，巧妙的使用“\9”这一标记，将IE游览器从所有情况中分离出来。 接着，再次使用“+”将IE8和IE7、IE6分离开来，这样IE8已经独立识别。<br>css// .bb{ background-color:#f1ee18; .background-color:#00deff\9; +background-color:#a200ff; _background-color:#1e0bd1; } </p>
+</li>
+<li><p>IE下,可以使用获取常规属性的方法来获取自定义属性, 也可以使用getAttribute()获取自定义属性; Firefox下,只能使用getAttribute()获取自定义属性. 解决方法:统一通过getAttribute()获取自定义属性。</p>
+</li>
+<li><p>IE下,event对象有x,y属性,但是没有pageX,pageY属性; Firefox下,event对象有pageX,pageY属性,但是没有x,y属性. * 解决方法：（条件注释）缺点是在IE浏览器下可能会增加额外的HTTP请求数。</p>
+</li>
+<li><p>Chrome 中文界面下默认会将小于 12px 的文本强制按照 12px 显示, 可通过加入 CSS 属性 -webkit-text-size-adjust: none; 解决。</p>
+</li>
+<li><p>超链接访问过后hover样式就不出现了 被点击访问过的超链接样式不在具有hover和active了解决方法是改变CSS属性的排列顺序: L-V-H-A : a:link {} a:visited {} a:hover {} a:active {}</p>
+</li>
+<li><p>怪异模式问题：漏写DTD声明，Firefox仍然会按照标准模式来解析网页，但在IE中会触发怪异模式。为避免怪异模式给我们带来不必要的麻烦，最好养成书写DTD声明的好习惯。现在可以使用<a href="http://www.w3.org/TR/html5/single-page.html" target="_blank" rel="noopener">html5</a>推荐的写法：<code>&lt;doctype html&gt;</code></p>
+</li>
+<li><p>上下margin重合问题<br>ie和ff都存在，相邻的两个div的margin-left和margin-right不会重合，但是margin-top和margin-bottom却会发生重合。<br>解决方法，养成良好的代码编写习惯，同时采用margin-top或者同时采用margin-bottom。</p>
+</li>
+<li><p>ie6对png图片格式支持不好(引用一段脚本处理)</p>
+</li>
+</ul>
+<h3 id="简述前端优化的方式-旧的雅虎34条-h5新添加的方式"><a href="#简述前端优化的方式-旧的雅虎34条-h5新添加的方式" class="headerlink" title="简述前端优化的方式 旧的雅虎34条|h5新添加的方式"></a>简述前端优化的方式 旧的雅虎34条|h5新添加的方式</h3><p>1、尽量减少HTTP请求次数<br>2、减少DNS查找次数<br>3、避免跳转<br>4、可缓存的AJAX<br>5、推迟加载内容<br>6、预加载<br>7、减少DOM元素数量<br>8、根据域名划分页面内容<br>9、使iframe的数量最小<br>10、不要出现404错误<br>11、使用内容分发网络<br>12、为文件头指定Expires或Cache-Control 13、Gzip压缩文件内容<br>14、配置ETag<br>15、尽早刷新输出缓冲<br>16、使用GET来完成AJAX请求<br>17、把样式表置于顶部<br>18、避免使用CSS表达式（Expression）<br>19、使用外部JavaScript和CSS<br>20、削减JavaScript和CSS<br>21、用<link>代替@import<br>22、避免使用滤镜<br>23、把脚本置于页面底部<br>24、剔除重复脚本</p>
+<h3 id="jquery版本-1-11兼容"><a href="#jquery版本-1-11兼容" class="headerlink" title="jquery版本?1.11兼容?"></a>jquery版本?1.11兼容?</h3><p>Query 2.x系列和 jQuery 1.x拥有同样的API，但是不再支持IE6、7、8。<br>推荐使用 1.x version，除非你确定IE6、7、8用户不再访问网站。<br>jquery1.11属于1.x 版本，其兼容IE6、7、8，所以也支持IE9.</p>
+<h3 id="media属性？screen？All？max-width-min-width"><a href="#media属性？screen？All？max-width-min-width" class="headerlink" title="media属性？screen？All？max-width?min-width?"></a>media属性？screen？All？max-width?min-width?</h3><p>media 属性规定被链接文档将显示在什么设备上。media 属性用于为不同的媒介类型规定不同的样式。Screen计算机默认屏幕，all适用于所有设备，max-width超过最大宽度就不执行，min-width必须大于最小宽度才执行。</p>
+<h3 id="meta标签的name属性值？"><a href="#meta标签的name属性值？" class="headerlink" title="meta标签的name属性值？"></a>meta标签的name属性值？</h3><p>name 属性主要用于描述网页，与之对应的属性值为content，content中的内容主要是便于搜索引擎机器人查找信息和分类信息用的。<br>meta标签的name属性语法格式是：＜meta name=”参数” content=”具体的参数值”＞。<br>其中name属性主要有以下几种参数：<br>A 、Keywords(关键字)说明：keywords用来告诉搜索引擎你网页的关键字是什么。<br>B 、description(网站内容描述) 说明：description用来告诉搜索引擎你的网站主要内容.<br>C 、robots(机器人向导)说明：robots用来告诉搜索机器人哪些页面需要索引，哪些页面不需要索引。<br>content的参数有all,none,index,noindex,follow,nofollow,默认是all。<br>举例：＜meta name=”robots” content=”none”＞D 、author(作者)</p>
+<h3 id="一般做手机页面切图有几种方式"><a href="#一般做手机页面切图有几种方式" class="headerlink" title="一般做手机页面切图有几种方式?"></a>一般做手机页面切图有几种方式?</h3><p>响应式布局，弹性布局display：flex，利用js编写设定比例，给根元素设定像素，使用rem为单位。</p>
+<h3 id="px-em-rem有什么区别？-为什么通常给font-size-设置的字体为62-5"><a href="#px-em-rem有什么区别？-为什么通常给font-size-设置的字体为62-5" class="headerlink" title="px/em/rem有什么区别？ 为什么通常给font-size 设置的字体为62.5%"></a>px/em/rem有什么区别？ 为什么通常给font-size 设置的字体为62.5%</h3><p>相对于当前对象内文本的字体尺寸。如当前对行内文本的字体尺寸未被人为设置，则相对于浏览器的默认字体尺寸。<br>1、em的值并不是固定的；<br>2、em会继承父级元素的字体大小。使用rem为元素设定字体大小时，仍然是相对大小，但相对的只是HTML根元素。这个单位可谓集相对大小和绝对大小的优点于一身，通过它既可以做到只修改根元素就成比例地调整所有字体大小，又可以避免字体大小逐层复合的连锁反应。<br>rem是相对于浏览器进行缩放的。1rem默认是16px，在响应式布局中，一个个除来转换成rem，太麻烦，所以重置rem<br>body{font-size=62.5% } 此时1rem = 10px;若是12px则是1.2rem.</p>
+<h3 id="sass和scss有什么区别-sass一般怎么样编译的"><a href="#sass和scss有什么区别-sass一般怎么样编译的" class="headerlink" title="sass和scss有什么区别?sass一般怎么样编译的"></a>sass和scss有什么区别?sass一般怎么样编译的</h3><p>文件扩展名不同，Sass 是以“.sass”后缀为扩展名，而 SCSS 是以“.scss”后缀为扩展名；语法书写方式不同，Sass 是以严格的缩进式语法规则来书写，不带大括号({})和分号(;)，而 SCSS 的语法书写和我们的 CSS 语法书写方式非常类似。</p>
+<h3 id="如果对css进行优化如何处理？"><a href="#如果对css进行优化如何处理？" class="headerlink" title="如果对css进行优化如何处理？"></a>如果对css进行优化如何处理？</h3><p>压缩打包，图片整合，避免使用Hack，解决兼容问题，使用简写，让CSS能保证日后的维护。</p>
+<h3 id="如何对css文件进行压缩合并-gulp"><a href="#如何对css文件进行压缩合并-gulp" class="headerlink" title="如何对css文件进行压缩合并? gulp ?"></a>如何对css文件进行压缩合并? gulp ?</h3><p>使用gulp, 首页全局安装gulp。<br>1、npm install –global gulp<br>2、其次局部安装gulp。npm install gulp –save-dev<br>3、在项目根目录下创建一个名为 gulpfile.js 的文件<br>var gulp = require(‘gulp’);<br>gulp.task(‘default’, function() {<br>// 将你的默认的任务代码放在这});<br>4、运行gulp。（默认的名为 default 的任务（task）将会被运行，想要单独执行特定的任务（task），请输入 gulp <task> <othertask>）<br>gulp<br>合并和压缩JS、CSS文件<br>压缩JS，CSS文件需要引用如下组件：<br>gulp-minify-css: 压缩css</p>
+<h3 id="组件-模块化编程？"><a href="#组件-模块化编程？" class="headerlink" title="组件? 模块化编程？"></a>组件? 模块化编程？</h3><p>组件化编程: 将js css html包装一起提供方法和效果；<br>模块化化: 将相同的功能抽取出来 存放在一个位置进行编程</p>
+<h3 id="图片和文字在同一行显示"><a href="#图片和文字在同一行显示" class="headerlink" title="图片和文字在同一行显示?"></a>图片和文字在同一行显示?</h3><p>1 在css中给div添加上“vertical-align:middle”属性。<br>2 分别把图片和文字放入不同的div中，然后用“margin”属性进行定位，就可以使他们显示在同一行。<br>3 把图片设置为背景图片。</p>
+<h3 id="禁止事件冒泡"><a href="#禁止事件冒泡" class="headerlink" title="禁止事件冒泡"></a>禁止事件冒泡</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">event.stopPropagation()</span><br></pre></td></tr></table></figure>
+
+<h3 id="禁止默认事件"><a href="#禁止默认事件" class="headerlink" title="禁止默认事件"></a>禁止默认事件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">event.preventDefault()</span><br></pre></td></tr></table></figure>
+
+<h3 id="a标签中-active-hover-link-visited-正确的设置顺序是什么"><a href="#a标签中-active-hover-link-visited-正确的设置顺序是什么" class="headerlink" title="a标签中 active hover link visited 正确的设置顺序是什么?"></a>a标签中 active hover link visited 正确的设置顺序是什么?</h3><p>a标签的link、visited、hover、active是有一定顺序的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a:link </span><br><span class="line">a:visited </span><br><span class="line">a:hover </span><br><span class="line">a:active</span><br></pre></td></tr></table></figure>
+
+<h3 id="a标签中-如何禁用href-跳转页面-或-定位链接"><a href="#a标签中-如何禁用href-跳转页面-或-定位链接" class="headerlink" title="a标签中 如何禁用href 跳转页面 或 定位链接"></a>a标签中 如何禁用href 跳转页面 或 定位链接</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">e.preventDefault();</span><br><span class="line">href&#x3D;&quot;javascript:void(0);</span><br></pre></td></tr></table></figure>
+
+<h3 id="手机端上-图片长时间点击会选中图片，如何处理"><a href="#手机端上-图片长时间点击会选中图片，如何处理" class="headerlink" title="手机端上 图片长时间点击会选中图片，如何处理?"></a>手机端上 图片长时间点击会选中图片，如何处理?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">onselect&#x3D;function() &#123;</span><br><span class="line">return false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="video标签的几个个属性方法"><a href="#video标签的几个个属性方法" class="headerlink" title="video标签的几个个属性方法"></a>video标签的几个个属性方法</h3><p>src：视频的URL<br>poster：视频封面，没有播放时显示的图片<br>preload：预加载<br>autoplay：自动播放<br>loop：循环播放<br>controls：浏览器自带的控制条<br>width：视频宽度<br>height：视频高度</p>
+<h3 id="常见的视频编码格式有几种-视频格式有几种"><a href="#常见的视频编码格式有几种-视频格式有几种" class="headerlink" title="常见的视频编码格式有几种?视频格式有几种?"></a>常见的视频编码格式有几种?视频格式有几种?</h3><p>视频格式：MPEG-1、MPEG-2和MPEG4 、AVI 、RM、ASF和WMV格式<br>视频编码格式：H.264、MPEG-4、MPEG-2、WMA-HD以及VC-1</p>
+<h3 id="canvas在标签上设置宽高-和在style中设置宽高有什么区别？"><a href="#canvas在标签上设置宽高-和在style中设置宽高有什么区别？" class="headerlink" title="canvas在标签上设置宽高 和在style中设置宽高有什么区别？"></a>canvas在标签上设置宽高 和在style中设置宽高有什么区别？</h3><p>canvas标签的width和height是画布实际宽度和高度，绘制的图形都是在这个上面。而style的width和height是canvas在浏览器中被渲染的高度和宽度。如果canvas的width和height没指定或值不正确，就被设置成默认值 。</p>
+<h3 id="border-image？box-sizing"><a href="#border-image？box-sizing" class="headerlink" title="border-image？box-sizing?"></a>border-image？box-sizing?</h3><p>Border-image : 图形化边框<br>Box-sizing : 属性允许您以特定的方式定义匹配某个区域的特定元素。<br>语法 ：box-sizing：content-box | border-box<br>Content-box : padding和border不被包含在定义的width和height之内。对象的实际宽度等于设置的width值和border、padding之和，即 ( Element width = width + border + padding) 此属性表现为标准模式下的盒模型 .<br>Border-box : padding和border被包含在定义的width和height之内。对象的实际宽度就等于设置的width值，即使定义有border和padding也不会改变对象的实际宽度，即 ( Element width = width ) 此属性表现为怪异模式下的盒模型。</p>
+<h3 id="渐进增强和优雅降级"><a href="#渐进增强和优雅降级" class="headerlink" title="渐进增强和优雅降级"></a>渐进增强和优雅降级</h3><p>渐进增强 progressive enhancement：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。<br>优雅降级 graceful degradation：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。<br>区别：优雅降级是从复杂的现状开始，并试图减少用户体验的供给，而渐进增强则是从一个非常基础的，能够起作用的版本开始，并不断扩充，以适应未来环境的需要。<br>降级（功能衰减）意味着往回看；而渐进增强则意味着朝前看，同时保证其根基处于安全地带。<br>“优雅降级”观点<br>“优雅降级”观点认为应该针对那些最高级、最完善的浏览器来设计网站。而将那些被认为“过时”或有功能缺失的浏览器下的测试工作安排在开发周期的最后阶段，并把测试对象限定为主流浏览器（如 IE、Mozilla 等）的前一个版本。<br>在这种设计范例下，旧版的浏览器被认为仅能提供“简陋却无妨 (poor, but passable)” 的浏览体验。你可以做一些小的调整来适应某个特定的浏览器。但由于它们并非我们所关注的焦点，因此除了修复较大的错误之外，其它的差异将被直接忽略。<br>“渐进增强”观点<br>“渐进增强”观点则认为应关注于内容本身。<br>内容是我们建立网站的诱因。有的网站展示它，有的则收集它，有的寻求，有的操作，还有的网站甚至会包含以上的种种，但相同点是它们全都涉及到内容。这使得“渐进增强”成为一种更为合理的设计范例。这也是它立即被 Yahoo! 所采纳并用以构建其“分级式浏览器支持 (Graded Browser Support)”策略的原因所在。<br>那么问题来了。现在产品经理看到IE6,7,8网页效果相对高版本现代浏览器少了很多圆角，阴影（CSS3），要求兼容（使用图片背景，放弃CSS3），你会如何说服他？</p>
+<h3 id="解释在ie低版本下的怪异盒模型和c3的怪异盒模型-和-弹性盒模型"><a href="#解释在ie低版本下的怪异盒模型和c3的怪异盒模型-和-弹性盒模型" class="headerlink" title="解释在ie低版本下的怪异盒模型和c3的怪异盒模型 和 弹性盒模型?"></a>解释在ie低版本下的怪异盒模型和c3的怪异盒模型 和 弹性盒模型?</h3><p>IE当padding+border的值小于width或者height:<br>盒模型的宽度=margin(左右)+width（width已经包含了padding和border的值）<br>盒模型的高度=margin(上下)+height（height已经包含了padding和border的值）<br>当padding+border的值大于width或者height:<br>盒模型的宽度=margin(左右)+padding(左右)+border(左右)<br>盒模型的高度=margin(上下)+padding(上下)+border(上下)+19px （加一个默认行高 19px） 所以相当于是padding+border和width或者height比大小，谁大取谁。<br>以上几种DOCTYPE都是标准的文档类型，无论使用哪种模式完整定义DOCTYPE，都会触发标准模式，而如果DOCTYPE缺失则在ie6，ie7，ie8下将会触发怪异模式（quirks 模式） CSS3box-sizing有两个值一个是content-box，另一个是border-box。<br>当设置为box-sizing:content-box时，将采用标准模式解析计算，也是默认模式；<br>当设置为box-sizing:border-box时，将采用怪异模式解析计算；<br>Css3弹性盒模型引入了新的盒子模型—弹性盒模型，该模型决定一个盒子在其他盒子中的分布方式以及如何处理可用的空间。使用该模型，可以很轻松的创建自适应浏览器窗口的流动布局或自适应字体大小的弹性布局。</p>
+<h3 id="animation对应的属性"><a href="#animation对应的属性" class="headerlink" title="animation对应的属性"></a>animation对应的属性</h3><p>写法：animation: name duration timing-function delay iteration-count direction;<br>下面是对应的属性的介绍<br>animation-name 规定需要绑定到选择器的 keyframe 名称。<br>animation-duration 规定完成动画所花费的时间，以秒或毫秒计。<br>animation-timing-function 规定动画的速度曲线。<br>animation-delay 规定在动画开始之前的延迟。<br>animation-iteration-count 规定动画应该播放的次数。<br>animation-direction 规定是否应该轮流反向播放动画。</p>
+<h3 id="transition"><a href="#transition" class="headerlink" title="transition?"></a>transition?</h3><p>css的transition允许css的属性值在一定的时间区间内平滑地过渡。这种效果可以在鼠标单击、获得焦点、被点击或对元素任何改变中触发，并圆滑地以动画效果改变CSS的属性值 注意区别transform，transform是进行2D转换的 如移动，比例化，反过来，旋转，和拉伸元素。</p>
+<h3 id="h5新特性？"><a href="#h5新特性？" class="headerlink" title="h5新特性？"></a>h5新特性？</h3><p>1、绘画的 canvas 元素<br>2、用于媒介回放的 video 和 audio 元素<br>3、对本地离线存储的更好的支持<br>4、新的特殊内容元素，比如 article、footer、header、nav、section 5、新的表单控件，比如 calendar、date、time、email、url、search</p>
+<h3 id="canvas-如何绘制一个三角形-正方形"><a href="#canvas-如何绘制一个三角形-正方形" class="headerlink" title="canvas 如何绘制一个三角形|正方形"></a>canvas 如何绘制一个三角形|正方形</h3><p>moveto 是移动到某个坐标， lineto 是从当前坐标连线到某个坐标。<br>这两个函数加起来就是画一条直线。 画线要用“笔”，那么MoveTo()把笔要画的起始位置固定了（x,y）然后要固定终止位置要用到LineTo函数确定终止位置（xend,yend）,这样一条线就画出来了。 每次与前面一个坐标相连 。<br>stroke() 方法会实际地绘制出通过 moveTo() 和 lineTo() 方法定义的路径。默认颜色是黑色。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML5&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta http-equiv&#x3D;&quot;Content-Type&quot; content&#x3D;&quot;text&#x2F;html; charset&#x3D;utf-8&quot; &#x2F;&gt;</span><br><span class="line">  &lt;title&gt;画布&lt;&#x2F;title&gt;</span><br><span class="line">  &lt;&#x2F;head&gt; </span><br><span class="line">&lt;body&gt;</span><br><span class="line">     &lt;canvas id&#x3D;&quot;myCanvas&quot; width&#x3D;&quot;200&quot; height&#x3D;&quot;100&quot; style&#x3D;&quot;border:1px solid #c3c3c3;&quot;&gt;</span><br><span class="line">     Your browser does not support the canvas element.</span><br><span class="line">     &lt;&#x2F;canvas&gt;</span><br><span class="line">     &lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">         var c&#x3D;document.getElementById(&quot;myCanvas&quot;);</span><br><span class="line">&#x2F;&#x2F;三角形</span><br><span class="line">         var cxt&#x3D;c.getContext(&quot;2d&quot;);</span><br><span class="line">         cxt.moveTo(10,10);</span><br><span class="line">         cxt.lineTo(50,50);</span><br><span class="line">         cxt.lineTo(10,50);</span><br><span class="line">         cxt.lineTo(10,10);</span><br><span class="line">         cxt.stroke();</span><br><span class="line">&#x2F;&#x2F;正方形</span><br><span class="line">         var cxt2&#x3D;c.getContext(&quot;2d&quot;);</span><br><span class="line">         cxt2.moveTo(60,10);</span><br><span class="line">         cxt2.lineTo(100,10);</span><br><span class="line">         cxt2.lineTo(100,50);</span><br><span class="line">         cxt2.lineTo(60,50);</span><br><span class="line">         cxt2.lineTo(60,10);</span><br><span class="line">         cxt2.stroke(); </span><br><span class="line">     &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="css清除浮动的几种方式？"><a href="#css清除浮动的几种方式？" class="headerlink" title="css清除浮动的几种方式？"></a>css清除浮动的几种方式？</h3><p>1、父级div定义 height<br>2、结尾处加空div标签 clear:both<br>3、父级div定义 伪类:after 和 zoom<br>4、父级div定义 overflow:hidden<br>5、父级div定义 overflow:auto<br>6、父级div 也一起浮动<br>7、父级div定义 display:table</p>
+<h3 id="为什么要初始化CSS样式。"><a href="#为什么要初始化CSS样式。" class="headerlink" title="为什么要初始化CSS样式。"></a>为什么要初始化CSS样式。</h3><p>因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。</p>
+<h3 id="CSS3有哪些新特性？"><a href="#CSS3有哪些新特性？" class="headerlink" title="CSS3有哪些新特性？"></a>CSS3有哪些新特性？</h3><p>CSS3实现圆角（border-radius），<br>阴影（box-shadow），<br>对文字加特效（text-shadow、），<br>线性渐变（gradient），<br>旋转（transform）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);</span><br></pre></td></tr></table></figure>
+
+<p>//旋转,缩放,定位,倾斜增加了更多的CSS选择器 多背景 rgba 在CSS3中唯一引入的伪元素是::selection.媒体查询，多栏布局 border-image</p>
+<h3 id="解释下-CSS-sprites，以及你要如何在页面或网站中使用它。"><a href="#解释下-CSS-sprites，以及你要如何在页面或网站中使用它。" class="headerlink" title="解释下 CSS sprites，以及你要如何在页面或网站中使用它。"></a>解释下 CSS sprites，以及你要如何在页面或网站中使用它。</h3><p>CSS Sprites其实就是把网页中一些背景图片整合到一张图片文件中，再利用CSS的“background-image”，“background- repeat”，“background-position”的组合进行背景定位，background-position可以用数字能精确的定位出背景图片的位置。这样可以减少很多图片请求的开销，因为请求耗时比较长；请求虽然可以并发，但是也有限制，一般浏览器都是6个。对于未来而言，就不需要这样做了，因为有了<code>http2</code>。</p>
+<h3 id="什么是-FOUC（无样式内容闪烁）？你如何来避免-FOUC？"><a href="#什么是-FOUC（无样式内容闪烁）？你如何来避免-FOUC？" class="headerlink" title="什么是 FOUC（无样式内容闪烁）？你如何来避免 FOUC？"></a>什么是 FOUC（无样式内容闪烁）？你如何来避免 FOUC？</h3><p>FOUC - Flash Of Unstyled Content 文档样式闪烁</p>
+<style type="text/css" media="all">@import "../fouc.css";</style> 
+<p>而引用CSS文件的@import就是造成这个问题的罪魁祸首。IE会先加载整个HTML文档的DOM，然后再去导入外部的CSS文件，因此，在页面DOM加载完成到CSS导入完成中间会有一段时间页面上的内容是没有样式的，这段时间的长短跟网速，电脑速度都有关系。<br>解决方法：只要在<head>之间加入一个<link>或者<script>元素就可以了。</p>
+<h3 id="a点击出现框，解决方法"><a href="#a点击出现框，解决方法" class="headerlink" title="a点击出现框，解决方法:"></a>a点击出现框，解决方法:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a,a:hover,a:active,a:visited,a:link,a:focus&#123; </span><br><span class="line"> -webkit-tap-highlight-color:rgba(0,0,0,0);</span><br><span class="line"> -webkit-tap-highlight-color: transparent;</span><br><span class="line"> outline:none;background: none;</span><br><span class="line"> text-decoration: none;border:none;</span><br><span class="line"> -webkit-appearance: none; &#125;</span><br></pre></td></tr></table></figure>
+    
 
     
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你喜欢我的文章<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          石小鑫
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://yoursite.com/2017/12/03/summary-html-css/" title="HTML+CSS常见问题" target="_blank">http://yoursite.com/2017/12/03/summary-html-css/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/SUMMARY//" class="article-tag-list-link color3">SUMMARY</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/12/03/summary-html-css/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+    <a href="/2017/12/05/vue-setting/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          vue-cli打包及常见问题解决
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/30/jq-lotteryTemplate/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JQ-九宫格抽奖模板</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -271,8 +604,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
