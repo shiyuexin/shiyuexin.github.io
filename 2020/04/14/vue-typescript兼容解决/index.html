@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 石小鑫的博客</title>
+  <title>vue + typescript兼容解决 | 石小鑫的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="石小鑫的博客 Web前端技术 H5前端前端技术 react redux es6 easyui css html5 jquery javascript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="石小鑫的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="在上一篇《vue + typescript》中，有的小伙伴可能跟我遇到了一样的问题，提示webpack的版本过低，要升级到4.x以上。ts需要webpack4.x的支持，我们通过vue-cli2.x创建的项目默认使用webpack3.6.0 所以我们还需要升级我们项目的webpack版本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue + typescript兼容解决">
+<meta property="og:url" content="http://yoursite.com/2020/04/14/vue-typescript%E5%85%BC%E5%AE%B9%E8%A7%A3%E5%86%B3/index.html">
 <meta property="og:site_name" content="石小鑫的博客">
-<meta property="og:description" content="石小鑫的博客 Web前端技术 H5前端前端技术 react redux es6 easyui css html5 jquery javascript">
+<meta property="og:description" content="在上一篇《vue + typescript》中，有的小伙伴可能跟我遇到了一样的问题，提示webpack的版本过低，要升级到4.x以上。ts需要webpack4.x的支持，我们通过vue-cli2.x创建的项目默认使用webpack3.6.0 所以我们还需要升级我们项目的webpack版本">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-14T07:46:18.000Z">
+<meta property="article:modified_time" content="2020-04-14T08:15:12.591Z">
 <meta property="article:author" content="石小鑫">
 <meta name="twitter:card" content="summary">
   
@@ -177,42 +179,133 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-vue-typescript兼容解决" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+    <h1 class="article-title" itemprop="name">
+      vue + typescript兼容解决
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2020/04/14/vue-typescript%E5%85%BC%E5%AE%B9%E8%A7%A3%E5%86%B3/" class="archive-article-date">
         <time datetime="2020-04-14T07:46:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
 </a>
 
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">537字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">2分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>在上一篇<a href="">《vue + typescript》</a>中，有的小伙伴可能跟我遇到了一样的问题，提示webpack的版本过低，要升级到4.x以上。ts需要webpack4.x的支持，我们通过vue-cli2.x创建的项目默认使用webpack3.6.0 所以我们还需要升级我们项目的webpack版本</p>
+<a id="more"></a>
+
+<h3 id="升级webpack-tslint及相关插件版本"><a href="#升级webpack-tslint及相关插件版本" class="headerlink" title="升级webpack,tslint及相关插件版本"></a>升级webpack,tslint及相关插件版本</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i webpack-cli@2.0.15 webpack@4.6.0 css-loader@0.28.11 extract-text-webpack-plugin@4.0.0-beta.0 file-loader@1.1.11 html-webpack-plugin@3.2.0 optimize-css-assets-webpack-plugin@4.0.0 url-loader@1.0.1 vue-loader@15.0.3 vue-style-loader@4.1.0 vue-template-compiler@2.5.16 webpack-bundle-analyzer@2.11.1 webpack-dev-middleware@3.1.3 webpack-dev-server@3.1.3 webpack-hot-middleware@2.22.1 compression-webpack-plugin@1.1.11 -D</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i eslint@4.19.1 eslint-config-standard@11.0.0 eslint-friendly-formatter@4.0.1 eslint-loader@2.0.0 eslint-plugin-import@2.11.0 eslint-plugin-node@6.0.1 eslint-plugin-promise@3.7.0 eslint-plugin-standard@3.1.0 eslint-plugin-vue@4.5.0 -D</span><br></pre></td></tr></table></figure>
+
+<h3 id="然后修改webpack文件"><a href="#然后修改webpack文件" class="headerlink" title="然后修改webpack文件"></a>然后修改webpack文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; webpack.base.conf.js</span><br><span class="line">const &#123; VueLoaderPlugin &#125; &#x3D; require(&#39;vue-loader&#39;)</span><br><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">    &#x2F;&#x2F; ...</span><br><span class="line">    plugins: [</span><br><span class="line">        new VueLoaderPlugin()</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="webpack-dev-conf-js添加mode"><a href="#webpack-dev-conf-js添加mode" class="headerlink" title="webpack.dev.conf.js添加mode"></a>webpack.dev.conf.js添加mode</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mode: &#39;development&#39;</span><br></pre></td></tr></table></figure>
+
+<h3 id="webpack-prod-conf-js添加mode"><a href="#webpack-prod-conf-js添加mode" class="headerlink" title="webpack.prod.conf.js添加mode"></a>webpack.prod.conf.js添加mode</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mode: &#39;production&#39;</span><br></pre></td></tr></table></figure>
+
+<h3 id="webpack-dev-conf-js移除配置，webpack4-x默认已有"><a href="#webpack-dev-conf-js移除配置，webpack4-x默认已有" class="headerlink" title="webpack.dev.conf.js移除配置，webpack4.x默认已有"></a>webpack.dev.conf.js移除配置，webpack4.x默认已有</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">new webpack.NamedModulesPlugin()</span><br><span class="line">new webpack.NoEmitOnErrorsPlugin()</span><br></pre></td></tr></table></figure>
+
+<h3 id="webpack-prod-conf-js下commonschunkplugin插件配置全部去掉"><a href="#webpack-prod-conf-js下commonschunkplugin插件配置全部去掉" class="headerlink" title="webpack.prod.conf.js下commonschunkplugin插件配置全部去掉"></a>webpack.prod.conf.js下commonschunkplugin插件配置全部去掉</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">new webpack.optimize.CommonsChunkPlugin(&#123;</span><br><span class="line">      name: &#39;vendor&#39;,</span><br><span class="line">      minChunks (module) &#123;</span><br><span class="line">        &#x2F;&#x2F; any required modules inside node_modules are extracted to vendor</span><br><span class="line">        return (</span><br><span class="line">          module.resource &amp;&amp;</span><br><span class="line">          &#x2F;\.js$&#x2F;.test(module.resource) &amp;&amp;</span><br><span class="line">          module.resource.indexOf(</span><br><span class="line">            path.join(__dirname, &#39;..&#x2F;node_modules&#39;)</span><br><span class="line">          ) &#x3D;&#x3D;&#x3D; 0</span><br><span class="line">        )</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;),</span><br><span class="line">    new webpack.optimize.CommonsChunkPlugin(&#123;</span><br><span class="line">      name: &#39;manifest&#39;,</span><br><span class="line">      minChunks: Infinity</span><br><span class="line">    &#125;),</span><br><span class="line">    new webpack.optimize.CommonsChunkPlugin(&#123;</span><br><span class="line">      name: &#39;app&#39;,</span><br><span class="line">      async: &#39;vendor-async&#39;,</span><br><span class="line">      children: true,</span><br><span class="line">      minChunks: 3</span><br><span class="line">&#125;),</span><br><span class="line">---------------------------------------------------------------------</span><br><span class="line">&#x2F;&#x2F; 添加</span><br><span class="line">optimization: &#123;</span><br><span class="line">    runtimeChunk: &#123;</span><br><span class="line">      name: &#39;manifest&#39;</span><br><span class="line">    &#125;,</span><br><span class="line">    splitChunks: &#123;</span><br><span class="line">      cacheGroups: &#123;</span><br><span class="line">        vendor: &#123;</span><br><span class="line">          test: &#x2F;[\\&#x2F;]node_modules[\\&#x2F;]&#x2F;,</span><br><span class="line">          name: &#39;vendor&#39;,</span><br><span class="line">          chunks: &#39;all&#39;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#39;async-vendors&#39;: &#123;</span><br><span class="line">          test: &#x2F;[\\&#x2F;]node_modules[\\&#x2F;]&#x2F;,</span><br><span class="line">          minChunks: 2,</span><br><span class="line">          chunks: &#39;async&#39;,</span><br><span class="line">          name: &#39;async-vendors&#39;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="webpack-prod-conf-js下ExtractTextPlugin修改"><a href="#webpack-prod-conf-js下ExtractTextPlugin修改" class="headerlink" title="webpack.prod.conf.js下ExtractTextPlugin修改"></a>webpack.prod.conf.js下ExtractTextPlugin修改</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">new ExtractTextPlugin(&#123;</span><br><span class="line">  filename: utils.assetsPath(&#39;css&#x2F;[name].[contenthash].css&#39;),</span><br><span class="line">  allChunks: true</span><br><span class="line">&#125;),</span><br><span class="line">&#x2F;&#x2F;改为</span><br><span class="line">new ExtractTextPlugin(&#123;</span><br><span class="line">  filename: utils.assetsPath(&#39;css&#x2F;[name].[md5:contenthash].css&#39;),</span><br><span class="line">  allChunks: true</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="至此，大功告成"><a href="#至此，大功告成" class="headerlink" title="至此，大功告成"></a>至此，大功告成</h3><p>执行npm run dev</p>
+<p>本文参考:<a href="https://blog.csdn.net/weixin_33696106/article/details/88024313" target="_blank" rel="noopener">《vue-cli2.x升级webpack4.6.x及添加typescript支持》</a></p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你喜欢我的文章<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/14/vue-typescript%E5%85%BC%E5%AE%B9%E8%A7%A3%E5%86%B3/" target="_blank">vue + typescript兼容解决</a>
-  
-    </h1>
-  
+      </a>
+    </div>
+    
 
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          石小鑫
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://yoursite.com/2020/04/14/vue-typescript兼容解决/" title="vue + typescript兼容解决" target="_blank">http://yoursite.com/2020/04/14/vue-typescript兼容解决/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
 
-        <div class="article-info info-on-right">
-          
-          
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -225,406 +318,105 @@
 	</div>
 
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/14/vue-typescript%E5%85%BC%E5%AE%B9%E8%A7%A3%E5%86%B3/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/14/vue-typescript/" class="archive-article-date">
-        <time datetime="2020-04-14T06:52:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/14/vue-typescript/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue + typescript</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/14/vue-typescript/" target="_blank">vue + typescript</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/13/TypeScript/" class="archive-article-date">
-        <time datetime="2020-04-13T03:35:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/13/TypeScript/" target="_blank">TypeScript</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/10/%E6%B8%90%E8%BF%9B%E5%BC%8FWeb%E5%BA%94%E7%94%A8-PWA-%E7%B3%BB%E5%88%97%E4%B8%80/" class="archive-article-date">
-        <time datetime="2020-04-10T06:48:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/10/%E6%B8%90%E8%BF%9B%E5%BC%8FWeb%E5%BA%94%E7%94%A8-PWA-%E7%B3%BB%E5%88%97%E4%B8%80/" target="_blank">渐进式Web应用(PWA)系列一</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/10/hexo%E7%BC%96%E8%BE%91%E5%8F%91%E5%B8%83/" class="archive-article-date">
-        <time datetime="2020-04-10T06:16:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/10/hexo%E7%BC%96%E8%BE%91%E5%8F%91%E5%B8%83/" target="_blank">hexo编辑发布</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2018/02/23/es6(2)/" class="archive-article-date">
-        <time datetime="2018-02-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-23</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2018/02/23/es6(2)/" target="_blank">ES6/ES2015核心内容(下)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ES6-ES2015//" class="article-tag-list-link color1">ES6/ES2015</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2018/02/22/es6(1)/" class="archive-article-date">
-        <time datetime="2018-02-21T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-22</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2018/02/22/es6(1)/" target="_blank">ES6/ES2015核心内容(上)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ES6-ES2015//" class="article-tag-list-link color1">ES6/ES2015</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2018/02/08/zepto-lottery-canvas/" class="archive-article-date">
-        <time datetime="2018-02-07T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-08</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2018/02/08/zepto-lottery-canvas/" target="_blank">zepto-canvas刮刮卡效果</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/抽奖活动//" class="article-tag-list-link color5">抽奖活动</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2017/12/28/nginx-config/" class="archive-article-date">
-        <time datetime="2017-12-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-28</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2017/12/28/nginx-config/" target="_blank">nginx使用及常用配置</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/nginx服务//" class="article-tag-list-link color3">nginx服务</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2017/12/21/weixin-forbidden-share/" class="archive-article-date">
-        <time datetime="2017-12-20T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-21</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2017/12/21/weixin-forbidden-share/" target="_blank">微信隐藏分享等操作按钮</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/微信//" class="article-tag-list-link color3">微信</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -665,8 +457,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
