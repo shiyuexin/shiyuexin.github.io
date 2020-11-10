@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 石小鑫的博客</title>
+  <title>总结-CSS | 石小鑫的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="石小鑫的博客 Web前端技术 H5前端前端技术 react redux es6 easyui css html5 jquery javascript">
-<meta property="og:type" content="website">
-<meta property="og:title" content="石小鑫的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="最近准备整理一下关于前端热门技能知识点，包含了：html，css，js，浏览器，工程化打包，vue，react等类型。顺便自己做一个技能信息的巩固学习记录，也希望能帮到需要的小伙伴们。😁接上篇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="总结-CSS">
+<meta property="og:url" content="http://yoursite.com/2020/11/09/%E5%89%8D%E7%AB%AF%E6%8A%80%E8%83%BD%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-css/index.html">
 <meta property="og:site_name" content="石小鑫的博客">
-<meta property="og:description" content="石小鑫的博客 Web前端技术 H5前端前端技术 react redux es6 easyui css html5 jquery javascript">
+<meta property="og:description" content="最近准备整理一下关于前端热门技能知识点，包含了：html，css，js，浏览器，工程化打包，vue，react等类型。顺便自己做一个技能信息的巩固学习记录，也希望能帮到需要的小伙伴们。😁接上篇">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-11-09T06:16:01.000Z">
+<meta property="article:modified_time" content="2020-11-10T08:19:38.011Z">
 <meta property="article:author" content="石小鑫">
 <meta name="twitter:card" content="summary">
   
@@ -177,411 +179,251 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-前端技能分类总结-css" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
   
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+    <h1 class="article-title" itemprop="name">
+      总结-CSS
+    </h1>
+  
+
+
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 <a href="/2020/11/09/%E5%89%8D%E7%AB%AF%E6%8A%80%E8%83%BD%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-css/" class="archive-article-date">
         <time datetime="2020-11-09T06:16:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-09</time>
 </a>
 
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">748字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">3分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>最近准备整理一下关于前端热门技能知识点，包含了：html，css，js，浏览器，工程化打包，vue，react等类型。顺便自己做一个技能信息的巩固学习记录，也希望能帮到需要的小伙伴们。😁<br>接上篇</p>
+<a id="more"></a>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><h3 id="1-标准CSS盒子模型，低版本IE的盒子模型有什么不同？"><a href="#1-标准CSS盒子模型，低版本IE的盒子模型有什么不同？" class="headerlink" title="1. 标准CSS盒子模型，低版本IE的盒子模型有什么不同？"></a>1. 标准CSS盒子模型，低版本IE的盒子模型有什么不同？</h3><ul>
+<li>有两种，W3C盒子模型，IE盒子模型</li>
+<li>盒模型：内容（content），填充（padding），边界（margin），边框（border）</li>
+<li>区别：IE的content包含border和padding</li>
+</ul>
+<h3 id="2-CSS清除浮动"><a href="#2-CSS清除浮动" class="headerlink" title="2. CSS清除浮动"></a>2. CSS清除浮动</h3><ul>
+<li>使用伪元素清除浮动</li>
+<li>伪元素：页面上不存在的元素，可以使用css添加上去<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.clearfix:after &#123;</span><br><span class="line">    content:&quot;&quot;;</span><br><span class="line">    height:0;</span><br><span class="line">    line-height:0;</span><br><span class="line">    display:block;</span><br><span class="line">    clear:both;</span><br><span class="line">    visibility:hidden;  &#x2F;_将元素隐藏起来_&#x2F; </span><br><span class="line">      在页面的 clearfix 元素后面添加了一个空的块级元素</span><br><span class="line">     （这个元素的高为 0 行高也为 0   并且这个元素清除了浮动）</span><br><span class="line">&#125;</span><br><span class="line">.clearfix &#123;</span><br><span class="line">  zoom:1;&#x2F;_为了兼容 IE6_&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="3-伪类和伪元素的区别？"><a href="#3-伪类和伪元素的区别？" class="headerlink" title="3. 伪类和伪元素的区别？"></a>3. 伪类和伪元素的区别？</h3><ul>
+<li>伪类：一个冒号，例如：:hover, :link, :active, :target, :not(), :focus等。给页面中已经存在的元素添加类</li>
+<li>伪元素：两个冒号，例如： ::before, ::after, ::first-line, ::first-letter, ::selection, ::placeholder等。伪元素添加了一个页面中没有的元素，只是视觉添加，不实在文档树中添加。</li>
+</ul>
+<h3 id="4-垂直居中一个元素？"><a href="#4-垂直居中一个元素？" class="headerlink" title="4. 垂直居中一个元素？"></a>4. 垂直居中一个元素？</h3><ul>
+<li>方法一：绝对定位居中（原始版之已知元素的高宽）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.content &#123;</span><br><span class="line">  width: 200px;</span><br><span class="line">  height: 200px;</span><br><span class="line">  background-color: #6699ff;</span><br><span class="line">  position: absolute; &#x2F;*父元素需要相对定位*&#x2F;</span><br><span class="line">  top: 50%;</span><br><span class="line">  left: 50%;</span><br><span class="line">  margin-top: -100px; &#x2F;*设为高度的1&#x2F;2*&#x2F;</span><br><span class="line">  margin-left: -100px; &#x2F;*设为宽度的1&#x2F;2*&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>方法二：绝对定位居中（改进版之一未知元素的高宽）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.content &#123;</span><br><span class="line">  width: 200px;</span><br><span class="line">  height: 200px;</span><br><span class="line">  background-color: #6699ff;</span><br><span class="line">  position: absolute; &#x2F;*父元素需要相对定位*&#x2F;</span><br><span class="line">  top: 50%;</span><br><span class="line">  left: 50%;</span><br><span class="line">  transform: translate(-50%, -50%); &#x2F;*在水平和垂直方向上各偏移-50%*&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>方法三：绝对定位居中（改进版之二未知元素的高宽）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.content &#123;</span><br><span class="line">  width: 200px;</span><br><span class="line">  height: 200px;</span><br><span class="line">  background-color: #6699ff;</span><br><span class="line">  margin: auto; &#x2F;*很关键的一步*&#x2F;</span><br><span class="line">  position: absolute; &#x2F;*父元素需要相对定位*&#x2F;</span><br><span class="line">  left: 0;</span><br><span class="line">  top: 0;</span><br><span class="line">  right: 0;</span><br><span class="line">  bottom: 0; &#x2F;*让四个定位属性都为0*&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>方法四：flex 布局居中<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">  display: flex; &#x2F;*设置外层盒子display为flex*&#x2F;</span><br><span class="line">  align-items: center; &#x2F;*设置内层盒子的垂直居中*&#x2F;</span><br><span class="line">  justify-content: center; &#x2F;*设置内层盒子的水平居中*&#x2F;</span><br><span class="line">  .content &#123;</span><br><span class="line">    width: 200px;</span><br><span class="line">    height: 200px;</span><br><span class="line">    background-color: #6699ff;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+那么问题来了，如何垂直居中一个 img（用更简便的方法。）<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.content &#123;</span><br><span class="line">  &#x2F;&#x2F;img的容器设置如下</span><br><span class="line">  display: table-cell;</span><br><span class="line">  text-align: center;</span><br><span class="line">  vertical-align: middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="5-css的content属性作用，应用方式？"><a href="#5-css的content属性作用，应用方式？" class="headerlink" title="5. css的content属性作用，应用方式？"></a>5. css的content属性作用，应用方式？</h3><ul>
+<li>最常用的就是伪类清除浮动。（见问题2）</li>
+<li>css content计数器。通过counter-reset，counter-increment两个属性，以及counter()/counters()一个方法配合 after / before 伪类实现。</li>
+</ul>
+<!-- ## JS
+## 工程化
+## VUE
+## React
+## Angular
+## 微信小程序 -->
+
+<p>本文参考：<br><a href="https://github.com/yisainan/web-interview" target="_blank" rel="noopener">https://github.com/yisainan/web-interview</a><br><a href="http://bigerfe.com/" target="_blank" rel="noopener">http://bigerfe.com/</a><br>膜拜大神🙏🙏🙏🙏🙏</p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你喜欢我的文章<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/11/09/%E5%89%8D%E7%AB%AF%E6%8A%80%E8%83%BD%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-css/" target="_blank">总结-CSS</a>
-  
-    </h1>
-  
+      </a>
+    </div>
+    
 
-
-        <div class="article-info info-on-right">
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          石小鑫
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://yoursite.com/2020/11/09/前端技能分类总结-css/" title="总结-CSS" target="_blank">http://yoursite.com/2020/11/09/前端技能分类总结-css/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
-          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
 
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/11/09/%E5%89%8D%E7%AB%AF%E6%8A%80%E8%83%BD%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-css/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/11/05/%E5%89%8D%E7%AB%AF%E6%8A%80%E8%83%BD%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-%E6%B5%8F%E8%A7%88%E5%99%A8/" class="archive-article-date">
-        <time datetime="2020-11-05T06:11:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-05</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2020/11/05/%E5%89%8D%E7%AB%AF%E6%8A%80%E8%83%BD%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-%E6%B5%8F%E8%A7%88%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">总结-浏览器</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/11/05/%E5%89%8D%E7%AB%AF%E6%8A%80%E8%83%BD%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-%E6%B5%8F%E8%A7%88%E5%99%A8/" target="_blank">总结-浏览器</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/11/03/%E5%89%8D%E7%AB%AF%E6%8A%80%E8%83%BD%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-html/" class="archive-article-date">
-        <time datetime="2020-11-03T03:16:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-03</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/11/03/%E5%89%8D%E7%AB%AF%E6%8A%80%E8%83%BD%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-html/" target="_blank">总结-HTML</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/14/vue-typescript%E5%85%BC%E5%AE%B9%E8%A7%A3%E5%86%B3/" class="archive-article-date">
-        <time datetime="2020-04-14T07:46:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/14/vue-typescript%E5%85%BC%E5%AE%B9%E8%A7%A3%E5%86%B3/" target="_blank">vue + typescript兼容解决</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/14/vue-typescript/" class="archive-article-date">
-        <time datetime="2020-04-14T06:52:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/14/vue-typescript/" target="_blank">vue + typescript</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/13/TypeScript/" class="archive-article-date">
-        <time datetime="2020-04-13T03:35:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-13</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/13/TypeScript/" target="_blank">TypeScript</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/vue//" class="article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/10/%E6%B8%90%E8%BF%9B%E5%BC%8FWeb%E5%BA%94%E7%94%A8-PWA-%E7%B3%BB%E5%88%97%E4%B8%80/" class="archive-article-date">
-        <time datetime="2020-04-10T06:48:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/10/%E6%B8%90%E8%BF%9B%E5%BC%8FWeb%E5%BA%94%E7%94%A8-PWA-%E7%B3%BB%E5%88%97%E4%B8%80/" target="_blank">渐进式Web应用(PWA)系列一</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/04/10/hexo%E7%BC%96%E8%BE%91%E5%8F%91%E5%B8%83/" class="archive-article-date">
-        <time datetime="2020-04-10T06:16:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2020/04/10/hexo%E7%BC%96%E8%BE%91%E5%8F%91%E5%B8%83/" target="_blank">hexo编辑发布</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2018/02/23/es6(2)/" class="archive-article-date">
-        <time datetime="2018-02-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-23</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2018/02/23/es6(2)/" target="_blank">ES6/ES2015核心内容(下)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ES6-ES2015//" class="article-tag-list-link color1">ES6/ES2015</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2018/02/22/es6(1)/" class="archive-article-date">
-        <time datetime="2018-02-21T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-22</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2018/02/22/es6(1)/" target="_blank">ES6/ES2015核心内容(上)</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ES6-ES2015//" class="article-tag-list-link color1">ES6/ES2015</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">Next &amp;raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -622,8 +464,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
