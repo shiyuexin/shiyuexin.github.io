@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Javascript实现图片预加载 | 石小鑫的博客</title>
+  <title>总结-浏览器 | 石小鑫的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Javascript实现图片预加载">
+  <meta name="description" content="最近准备整理一下关于前端热门技能知识点，包含了：html，css，js，浏览器，工程化打包，vue，react等类型。顺便自己做一个技能信息的巩固学习记录，也希望能帮到需要的小伙伴们。😁接上篇">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript实现图片预加载">
-<meta property="og:url" content="http://yoursite.com/2017/08/24/picture-preload/index.html">
+<meta property="og:title" content="总结-浏览器">
+<meta property="og:url" content="http://yoursite.com/2018/02/05/%E5%89%8D%E7%AB%AF%E6%8A%80%E8%83%BD%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-%E6%B5%8F%E8%A7%88%E5%99%A8/index.html">
 <meta property="og:site_name" content="石小鑫的博客">
-<meta property="og:description" content="Javascript实现图片预加载">
+<meta property="og:description" content="最近准备整理一下关于前端热门技能知识点，包含了：html，css，js，浏览器，工程化打包，vue，react等类型。顺便自己做一个技能信息的巩固学习记录，也希望能帮到需要的小伙伴们。😁接上篇">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2017-08-23T16:00:00.000Z">
-<meta property="article:modified_time" content="2019-03-11T13:23:09.266Z">
+<meta property="article:published_time" content="2018-02-05T06:11:51.000Z">
+<meta property="article:modified_time" content="2021-02-05T08:55:13.181Z">
 <meta property="article:author" content="石小鑫">
 <meta name="twitter:card" content="summary">
   
@@ -179,14 +179,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-picture-preload" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-前端技能分类总结-浏览器" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      Javascript实现图片预加载
+      总结-浏览器
     </h1>
   
 
@@ -198,8 +198,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2017/08/24/picture-preload/" class="archive-article-date">
-        <time datetime="2017-08-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-24</time>
+<a href="/2018/02/05/%E5%89%8D%E7%AB%AF%E6%8A%80%E8%83%BD%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-%E6%B5%8F%E8%A7%88%E5%99%A8/" class="archive-article-date">
+        <time datetime="2018-02-05T06:11:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-02-05</time>
 </a>
 
   
@@ -212,7 +212,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">438字</span>
+      <span class="post-count">1.8k字</span>
     </span>
   </span>
 
@@ -221,7 +221,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">6分</span>
     </span>
   </span>
 </div>
@@ -232,16 +232,66 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h3 id="【前言】"><a href="#【前言】" class="headerlink" title="【前言】"></a>【前言】</h3><p>图片预加载在web前端开发中运用相当广泛，比如一个H5活动主页中加入很多酷炫的动画效果，<br>我们先把项目中涉及到的图片下载到本地，然后再正式进入我们的项目中，这样可以优化用户体验。<br>好啦，废话不多说。楼宝宝直接上代码！</p>
+    <p>最近准备整理一下关于前端热门技能知识点，包含了：html，css，js，浏览器，工程化打包，vue，react等类型。顺便自己做一个技能信息的巩固学习记录，也希望能帮到需要的小伙伴们。😁<br>接上篇</p>
 <a id="more"></a>
-<h3 id="铛铛铛…干货在此-图片预加载的具体实现"><a href="#铛铛铛…干货在此-图片预加载的具体实现" class="headerlink" title="(铛铛铛…干货在此) 图片预加载的具体实现"></a>(铛铛铛…干货在此) 图片预加载的具体实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;图片预加载</span><br><span class="line">function preloadimages(arr)&#123;</span><br><span class="line">    var newimages&#x3D;[], loadedimages&#x3D;0</span><br><span class="line">    var postaction&#x3D;function()&#123;&#125;        &#x2F;&#x2F;此处增加了一个postaction函数</span><br><span class="line">    var arr&#x3D;(typeof arr!&#x3D;&quot;object&quot;)? [arr] : arr;</span><br><span class="line">    function imageloadpost()&#123;</span><br><span class="line">        loadedimages++</span><br><span class="line">        if (loadedimages&#x3D;&#x3D;arr.length)&#123;</span><br><span class="line">            postaction(newimages)      &#x2F;&#x2F;加载完成用我们调用postaction函数并将newimages数组做为参数传递进去</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for (var i&#x3D;0; i&lt;arr.length; i++)&#123;</span><br><span class="line">        newimages[i]&#x3D;new Image()</span><br><span class="line">        newimages[i].src&#x3D;arr[i]</span><br><span class="line">        newimages[i].onload&#x3D;function()&#123;</span><br><span class="line">            imageloadpost();</span><br><span class="line">        &#125;;</span><br><span class="line">        newimages[i].onerror&#x3D;function()&#123;</span><br><span class="line">            imageloadpost()</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return &#123;                         &#x2F;&#x2F;此处返回一个空白对象的done方法</span><br><span class="line">        done:function(f)&#123;</span><br><span class="line">            postaction&#x3D;f || postaction</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><h3 id="1-常见的浏览器内核有哪些？"><a href="#1-常见的浏览器内核有哪些？" class="headerlink" title="1. 常见的浏览器内核有哪些？"></a>1. 常见的浏览器内核有哪些？</h3><ul>
+<li>Trident 内核：IE,MaxThon,TT,The World,360,搜狗浏览器等。[又称 MSHTML]</li>
+<li>Gecko 内核：Netscape6 及以上版本，FF,MozillaSuite/SeaMonkey 等</li>
+<li>Presto 内核：Opera7 及以上。 [Opera 内核原为：Presto，现为：Blink;]</li>
+<li>Webkit 内核：Safari,Chrome 等。 [ Chrome 的：Blink（WebKit 的分支）]</li>
+</ul>
+<h3 id="2-跨标签页的通讯方式有哪些？"><a href="#2-跨标签页的通讯方式有哪些？" class="headerlink" title="2. 跨标签页的通讯方式有哪些？"></a>2. 跨标签页的通讯方式有哪些？</h3><ul>
+<li>BroadCast Channel</li>
+<li>Service Worker</li>
+<li>LocalStorage + window.onstorage监听</li>
+<li>Shared Worker + 定时器轮询(setInterval)</li>
+<li>IndexedDB + 定时器轮询(setInterval)</li>
+<li>cookie + 定时器轮询(setInterval)</li>
+<li>window.open + window.postMessage</li>
+<li>Websocket</li>
+</ul>
+<h3 id="3-浏览器的渲染过程"><a href="#3-浏览器的渲染过程" class="headerlink" title="3. 浏览器的渲染过程"></a>3. 浏览器的渲染过程</h3><ul>
+<li>浏览器获取HTML文件，然后对文件进行解析，形成 DOM Tree（文档对象模型树）</li>
+<li>解析CSS，生成CSSOM规则树</li>
+<li>基于DOM 和 CSSOM 执行脚本（Scripts）</li>
+<li>将DOM Tree和CSSOM规则树形成渲染树（Render Tree）</li>
+<li>使用渲染树布局（Layout）所有元素，计算每个节点的位置大小信息</li>
+<li>随后调用GPU进行绘制（Paint），遍历Render Tree的节点，并将元素呈现出来</li>
+</ul>
+<h3 id="4-浏览器的渲染过程"><a href="#4-浏览器的渲染过程" class="headerlink" title="4. 浏览器的渲染过程"></a>4. 浏览器的渲染过程</h3><p>浏览器会『从右往左』解析CSS选择器</p>
+<h3 id="5-浏览器的主要组成部分是什么？"><a href="#5-浏览器的主要组成部分是什么？" class="headerlink" title="5. 浏览器的主要组成部分是什么？"></a>5. 浏览器的主要组成部分是什么？</h3><ul>
+<li>用户界面:<br>用户界面主要包括：地址栏，后退/前进按钮，书签目录等；（除了从服务器请求到的网页窗口）</li>
+<li>浏览器引擎：<br>用来查询及操作渲染引擎的接口；</li>
+<li>渲染引擎：<br>用来显示请求的html内容；（包括样式，图片，js）</li>
+<li>网络：<br>主要是来完成网络调用，例如http请求，它具有平台无关的接口，可以在不同平台上工作；</li>
+<li>UI后端：<br>用来绘制类似组合选择框及对话框等基本组件，具有不特定于某个平台的通用接口，底层使用操作系统的用户接口。</li>
+<li>JS解释器 ：<br>用来解释执行JS代码；</li>
+<li>数据存储：<br>属于持久层，浏览器需要在硬盘中保存类似cookie的各种数据，HTML5定义了web database技术，这是一种轻量级完整的客户端存储技术。</li>
+</ul>
+<h3 id="6-如何解决跨域问题"><a href="#6-如何解决跨域问题" class="headerlink" title="6. 如何解决跨域问题"></a>6. 如何解决跨域问题</h3><ul>
+<li>jsonp<br>jsonp本质上是一个Hack，它利用script标签不受同源策略限制的特性进行跨域操作。<br>优点：实现简单，兼容性非常好<br>缺点：只支持get请求，有安全性问题，容易遭受xss攻击，需要服务端配合jsonp进行一定程度的改造</li>
+<li>跨域资源共享(CORS)<br>跨域资源共享(CORS) 是一种机制，它使用额外的 HTTP 头来告诉浏览器  让运行在一个 origin (domain) 上的Web应用被准许访问来自不同源服务器上的指定的资源。当一个资源从与该资源本身所在的服务器不同的域、协议或端口请求一个资源时，资源会发起一个跨域 HTTP 请求。</li>
+<li>Nginx服务器<br>nginx是一款极其强大的web服务器，其优点就是轻量级、启动快、高并发。<br>反向代理的原理很简单，即所有客户端的请求都必须先经过nginx的处理，nginx作为代理服务器再讲请求转发给node或者java服务，这样就规避了同源策略。</li>
+</ul>
+<h3 id="7-跨域携带cookie配置"><a href="#7-跨域携带cookie配置" class="headerlink" title="7. 跨域携带cookie配置"></a>7. 跨域携带cookie配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">withCredentials: true</span><br></pre></td></tr></table></figure>
 
-<h3 id="方法有了，要如何使用呢"><a href="#方法有了，要如何使用呢" class="headerlink" title="方法有了，要如何使用呢~"></a>方法有了，要如何使用呢~</h3><h4 id="首先preloadimages方法的参数一定要是数组哟"><a href="#首先preloadimages方法的参数一定要是数组哟" class="headerlink" title="首先preloadimages方法的参数一定要是数组哟~"></a>首先preloadimages方法的参数一定要是数组哟~</h4><p>相信大家在上个方法中已经看到了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;没错，这个就是对数组的校验</span><br><span class="line">var arr&#x3D;(typeof arr!&#x3D;&quot;object&quot;)? [arr] : arr;</span><br></pre></td></tr></table></figure>
+<h3 id="8-cookie属性及作用"><a href="#8-cookie属性及作用" class="headerlink" title="8. cookie属性及作用"></a>8. cookie属性及作用</h3><p>在Javascript脚本里，一个cookie 实际就是一个字符串属性。当你读取cookie的值时，就得到一个字符串，里面当前WEB页使用的所有cookies的名称和值。每个cookie除了name名称和value值这两个属性以外，还有四个属性。这些属性是： expires过期时间、 path路径、 domain域、以及 secure安全。</p>
+<ul>
+<li>Expires – 过期时间。<br>指定cookie的生命期。具体是值是过期日期。如果想让cookie的存在期限超过当前浏览器session会话时间，就必须使用这个属性。当过了到期日期时，浏览器就可以删除cookie文件，没有任何影响。</li>
+<li>Path – 路径。<br>指定与cookie关联的WEB页。值可以是一个目录，或者是一个路径。如果/head/index.html 建立了一个cookie，那么在/head/目录里的所有页面，以及该目录下面任何子目录里的页面都可以访问这个cookie。这就是说，在/head/stories/articles 里的任何页面都可以访问/head/index.html建立的cookie。但是，如果/zdnn/ 需要访问/head/index.html设置的cookes，该怎么办?这时，我们要把cookies的path属性设置成“/”。在指定路径的时候，凡是来自同一服务器，URL里有相同路径的所有WEB页面都可以共享cookies。现在看另一个例子：如果想让 /head/filters/ 和/head/stories/共享cookies，就要把path设成“/head”。</li>
+<li>Domain – 域。<br>指定关联的WEB服务器或域。值是域名，比如goaler.com。这是对path路径属性的一个延伸。如果我们想让dev.mycompany.com 能够访问bbs.mycompany.com设置的cookies，该怎么办? 我们可以把domain属性设置成“mycompany.com”，并把path属性设置成“/”。FYI：不能把cookies域属性设置成与设置它的服务器的所在域不同的值。</li>
+<li>Secure – 安全。<br>指定cookie的值通过网络如何在用户和WEB服务器之间传递。这个属性的值或者是“secure”，或者为空。缺省情况下，该属性为空，也就是使用不安全的HTTP连接传递数据。如果一个 cookie 标记为secure，那么，它与WEB服务器之间就通过HTTPS或者其它安全协议传递数据。不过，设置了secure属性不代表其他人不能看到你机器本地保存的cookie。换句话说，把cookie设置为secure，只保证cookie与WEB服务器之间的数据传输过程加密，而保存在本地的cookie文件并不加密。如果想让本地cookie也加密，得自己加密数据。</li>
+</ul>
+<h3 id="9-http状态码-301、302、304、408、500、502"><a href="#9-http状态码-301、302、304、408、500、502" class="headerlink" title="9.http状态码 301、302、304、408、500、502"></a>9.http状态码 301、302、304、408、500、502</h3><ul>
+<li>301 Moved Permanently：永久性重定向，表示请求的资源被分配了新的URL，之后应使用更改的URL；</li>
+<li>302 Found：临时性重定向。与301类似。但资源只是临时被移动。客户端应继续使用原有URI</li>
+<li>304 Not Modified 未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源</li>
+<li>408 Request Time-out 服务器等待客户端发送的请求时间过长，超时</li>
+<li>500 Internal Server Error 服务器内部错误，无法完成请求</li>
+<li>502 Bad Gateway 作为网关或者代理工作的服务器尝试执行请求时，从远程服务器接收到了一个无效的响应</li>
+</ul>
+<h3 id="10-PWA"><a href="#10-PWA" class="headerlink" title="10.PWA"></a>10.PWA</h3><h3 id="11-浏览器的缓存机制"><a href="#11-浏览器的缓存机制" class="headerlink" title="11.浏览器的缓存机制"></a>11.浏览器的缓存机制</h3><p>本文参考：<br><a href="https://github.com/yisainan/web-interview" target="_blank" rel="noopener">https://github.com/yisainan/web-interview</a><br><a href="http://bigerfe.com/" target="_blank" rel="noopener">http://bigerfe.com/</a><br>膜拜大神🙏🙏🙏🙏🙏</p>
 
-<h4 id="调用方法及方法处理"><a href="#调用方法及方法处理" class="headerlink" title="调用方法及方法处理"></a>调用方法及方法处理</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;建议此处的参数事先定义好，如果数量不多也可以直接写</span><br><span class="line">var imgArr &#x3D; [</span><br><span class="line">        &quot;images&#x2F;1.png&quot;,</span><br><span class="line">        &quot;images&#x2F;2.png&quot;,</span><br><span class="line">        &quot;images&#x2F;bottom.png&quot;</span><br><span class="line">    ];</span><br><span class="line">preloadimages(imgArr).done(function()&#123;</span><br><span class="line">    &#x2F;&#x2F;init();</span><br><span class="line">    console.log(&#39;图片已加载完！&#39;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="【最后】大家只要在预加载的时候配上高大上的预加载动画-完美！"><a href="#【最后】大家只要在预加载的时候配上高大上的预加载动画-完美！" class="headerlink" title="【最后】大家只要在预加载的时候配上高大上的预加载动画~完美！"></a>【最后】大家只要在预加载的时候配上高大上的预加载动画~完美！</h3>
     
 
     
@@ -277,7 +327,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://yoursite.com/2017/08/24/picture-preload/" title="Javascript实现图片预加载" target="_blank">http://yoursite.com/2017/08/24/picture-preload/</a>
+          <a href="http://yoursite.com/2018/02/05/前端技能分类总结-浏览器/" title="总结-浏览器" target="_blank">http://yoursite.com/2018/02/05/前端技能分类总结-浏览器/</a>
         </li>
         
         <li>
@@ -295,17 +345,6 @@
     
     
     
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Javascript//" class="article-tag-list-link color1">Javascript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
     
 
@@ -355,7 +394,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2017/08/24/picture-preload/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/02/05/%E5%89%8D%E7%AB%AF%E6%8A%80%E8%83%BD%E5%88%86%E7%B1%BB%E6%80%BB%E7%BB%93-%E6%B5%8F%E8%A7%88%E5%99%A8/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -370,18 +409,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/09/20/VS_Code/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/02/08/zepto-lottery-canvas/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Visual Studio Code
+          zepto-canvas刮刮卡效果
         
       </div>
     </a>
   
   
-    <a href="/2017/08/03/vue-build/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vue2.0新手上路-环境搭建到发布</div>
+    <a href="/2017/12/28/nginx-config/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">nginx使用及常用配置</div>
       <i class="icon-circle-right"></i>
     </a>
   
